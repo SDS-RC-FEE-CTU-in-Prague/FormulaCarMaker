@@ -1,0 +1,51 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyDriveLineXWD_FMU
+FMU.Modelclass = PTDriveLineXWD
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f535}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.Tunables.ShowInDDict = 1
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+FMU.InitParamValuesEarly = 0
+
+FMUIn.iDiff_mean.Link = IFVar
+FMUIn.iDiff_mean.Rel = CfgIF.iDiff_mean
+FMUIn.rotv_FL.Link = IFVar
+FMUIn.rotv_FL.Rel = WheelIn.FL.rotv
+FMUIn.rotv_FR.Link = IFVar
+FMUIn.rotv_FR.Rel = WheelIn.FR.rotv
+FMUIn.Trq_in.Link = IFVar
+FMUIn.Trq_in.Rel = DriveIn.Trq_in
+
+IFVar.DriveOut.rotv_in.Link = FMUVar
+IFVar.DriveOut.rotv_in.Rel = rotv_in
+IFVar.WheelOut.FL.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.FL.Trq_Drive.Rel = Trq_Drive_FL
+IFVar.WheelOut.FL.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.FL.Trq_Supp2WC.Rel = Trq_Supp2WC_FL
+IFVar.WheelOut.FR.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.FR.Trq_Drive.Rel = Trq_Drive_FR
+IFVar.WheelOut.FR.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.FR.Trq_Supp2WC.Rel = Trq_Supp2WC_FR
+IFVar.WheelOut.RL.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.RL.Trq_Drive.Rel = Trq_Drive_RL
+IFVar.WheelOut.RL.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.RL.Trq_Supp2WC.Rel = Trq_Supp2WC_RL
+IFVar.WheelOut.RR.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.RR.Trq_Drive.Rel = Trq_Drive_RR
+IFVar.WheelOut.RR.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.RR.Trq_Supp2WC.Rel = Trq_Supp2WC_RR
+
+# Specifies the driveline mean differential ratio.
+# Default is 3.0
+PowerTrain.DL.iDiff_mean = 4.0
+# Specifies on which position the drive source ds
+# is applied.
+# Following kinds are supported: NoPosition,Center, Front, Rear, FL, FR, RL, RR
+PowerTrain.DL.DriveSourcePos = Front

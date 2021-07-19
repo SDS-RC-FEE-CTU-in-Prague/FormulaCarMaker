@@ -1,0 +1,69 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 5.0.2 2015-09-16 10:40 TEMPLATE
+
+FMU.Name = MySteeringSrc_FMU
+FMU.Modelclass = Steering
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c91308}
+
+FMU.Inputs.ShowInDDict = no
+FMU.Outputs.ShowInDDict = no
+FMU.MakePluginfo = no
+FMU.DebugLogging = no
+FMU.InitParamStartValues = 1
+
+FMUIn.L_Frc.Link = IFVar
+FMUIn.L_Frc.Rel = L.Frc
+FMUIn.L_Inert.Link = IFVar
+FMUIn.L_Inert.Rel = L.Inert
+FMUIn.PosSign.Link = DDictVar
+FMUIn.PosSign.Rel = Steer.Cfg.PosSign
+FMUIn.R_Frc.Link = IFVar
+FMUIn.R_Frc.Rel = R.Frc
+FMUIn.R_Inert.Link = IFVar
+FMUIn.R_Inert.Rel = R.Inert
+FMUIn.Trq_In.Link = IFVar
+FMUIn.Trq_In.Rel = WhlTrq
+
+IFOut.AssistFrc.Link =
+IFOut.AssistFrc.Rel =
+IFOut.AssistTrqCol.Link =
+IFOut.AssistTrqCol.Rel =
+IFOut.AssistTrqPin.Link =
+IFOut.AssistTrqPin.Rel =
+IFOut.L.iSteer2q.Link = FMUVar
+IFOut.L.iSteer2q.Rel = L_iSteer2q
+IFOut.L.q.Link = FMUVar
+IFOut.L.q.Rel = L_q
+IFOut.L.qp.Link = FMUVar
+IFOut.L.qp.Rel = L_qp
+IFOut.L.qpp.Link = FMUVar
+IFOut.L.qpp.Rel = L_qpp
+IFOut.R.iSteer2q.Link = FMUVar
+IFOut.R.iSteer2q.Rel = R_iSteer2q
+IFOut.R.q.Link = FMUVar
+IFOut.R.q.Rel = R_q
+IFOut.R.qp.Link = FMUVar
+IFOut.R.qp.Rel = R_qp
+IFOut.R.qpp.Link = FMUVar
+IFOut.R.qpp.Rel = R_qpp
+IFOut.WhlAng.Link = FMUVar
+IFOut.WhlAng.Rel = Ang
+IFOut.WhlAngAcc.Link = FMUVar
+IFOut.WhlAngAcc.Rel = AngAcc
+IFOut.WhlAngVel.Link = FMUVar
+IFOut.WhlAngVel.Rel = AngVel
+IFOut.WhlTrq.Link = FMUVar
+IFOut.WhlTrq.Rel = Trq
+IFOut.WhlTrqStatic.Link = FMUVar
+IFOut.WhlTrqStatic.Rel = TrqStatic
+
+DDict.Links:
+
+
+# Optional. Specifies the supported input kind
+# by the user steering model.
+# Following kinds are supported: Angle, Torque,
+# AngleAndTorque
+Steering.SInputKind = Torque
+

@@ -1,0 +1,21 @@
+FileIdent =	CarMaker-SuspExtFrcs-MyModel 1
+
+SFH.SpringFL = 0.33 0 24000
+SFH.SpringFR = 0.33 0 24000
+SFH.SpringRL = 0.11 0 30000
+SFH.SpringRR = 0.11 0 30000
+
+SFH.Damp_PushFL = 1600
+SFH.Damp_PushFR = 1600
+SFH.Damp_PushRL = 2000
+SFH.Damp_PushRR = 2000
+
+SFH.Damp_PullFL = 2300
+SFH.Damp_PullFR = 2300
+SFH.Damp_PullRL = 5500
+SFH.Damp_PullRR = 5500
+
+SFH.StabiFL = 15000
+SFH.StabiFR = 15000
+SFH.StabiRL = 15000
+SFH.StabiRR = 15000

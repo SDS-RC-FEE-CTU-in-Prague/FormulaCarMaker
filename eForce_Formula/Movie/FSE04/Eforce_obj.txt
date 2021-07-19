@@ -1,0 +1,22 @@
+Paste this to FSE_eforce4.obj file header
+Be carefull with .mtl file. It has texture paths! If you dont see textures you have problem there
+
+### BEGIN IPG-MOVIE-INFO
+# Translate 1.95 0 0.2
+# Scale 1 1 1
+# Rotate -90 0 0 1
+# Rotate 90 1 0 0
+# TwoSided 1
+# Wheel.fl 0 0.65 0.20 0.20 0.20 0 FS_tire10_eforce.obj
+# Wheel.fr 0 -.65 0.20 0.20 0.20 0 FS_tire10_eforce.obj
+# Wheel.rl -1.54 0.60 0.20 0.20 0.20 0 FS_tire10_eforce.obj
+# Wheel.rr -1.54 -.60 0.20 0.20 0.20 0 FS_tire10_eforce.obj
+### END IPG-MOVIE-INFO
+
+Paste this to FSE_tire10_eforce4.obj file header
+
+### BEGIN IPG-MOVIE-INFO
+# Scale 1 1 1
+# Rotate 90 0 0 1
+# Rotate 90 1 0 0
+### END IPG-MOVIE-INFO

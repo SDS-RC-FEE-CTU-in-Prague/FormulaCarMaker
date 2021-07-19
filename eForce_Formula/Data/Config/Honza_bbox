@@ -1,0 +1,12 @@
+#-------------------------------------------------------------------------------
+# Output quantities for data storage
+#-------------------------------------------------------------------------------
+
+Car.v
+
+PT.PwrSupply.HV1.Pwr
+PT.PwrSupply.HV1.Voltage
+
+Time
+
+Vhcl.Distance

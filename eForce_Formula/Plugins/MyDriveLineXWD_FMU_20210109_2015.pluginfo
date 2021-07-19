@@ -1,0 +1,92 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 8.0 2019-02-12 11:52 TEMPLATE
+
+FMU.Name = MyDriveLineXWD_FMU
+FMU.Modelclass = PTDriveLineXWD
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f535}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.Tunables.ShowInDDict = 1
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+FMU.InitParamValuesEarly = 0
+
+FMUIn.iDiff_mean.Link = IFVar
+FMUIn.iDiff_mean.Rel = CfgIF.iDiff_mean
+FMUIn.rotv_FL.Link = IFVar
+FMUIn.rotv_FL.Rel = WheelIn.FL.rotv
+FMUIn.rotv_FR.Link = IFVar
+FMUIn.rotv_FR.Rel = WheelIn.FR.rotv
+FMUIn.Trq_in.Link = IFVar
+FMUIn.Trq_in.Rel = DriveIn.Trq_in
+
+IFOut.DriveOut.rot_in.Link =
+IFOut.DriveOut.rot_in.Rel =
+IFOut.DriveOut.rotv_in.Link = FMUVar
+IFOut.DriveOut.rotv_in.Rel = rotv_in
+IFOut.PowerDelta.Diffs.Link =
+IFOut.PowerDelta.Diffs.Rel =
+IFOut.PowerDelta.Inert_DL.Link =
+IFOut.PowerDelta.Inert_DL.Rel =
+IFOut.PowerDelta.PlanetGear.Link =
+IFOut.PowerDelta.PlanetGear.Rel =
+IFOut.PowerDelta.Shafts.Link =
+IFOut.PowerDelta.Shafts.Rel =
+IFOut.PowerDelta.Spring_DL.Link =
+IFOut.PowerDelta.Spring_DL.Rel =
+IFOut.Trq_Supp2Bdy1.rx.Link =
+IFOut.Trq_Supp2Bdy1.rx.Rel =
+IFOut.Trq_Supp2Bdy1.ry.Link =
+IFOut.Trq_Supp2Bdy1.ry.Rel =
+IFOut.Trq_Supp2Bdy1.rz.Link =
+IFOut.Trq_Supp2Bdy1.rz.Rel =
+IFOut.Trq_Supp2Bdy1B.rx.Link =
+IFOut.Trq_Supp2Bdy1B.rx.Rel =
+IFOut.Trq_Supp2Bdy1B.ry.Link =
+IFOut.Trq_Supp2Bdy1B.ry.Rel =
+IFOut.Trq_Supp2Bdy1B.rz.Link =
+IFOut.Trq_Supp2Bdy1B.rz.Rel =
+IFOut.Trq_Supp2BdyEng.rx.Link =
+IFOut.Trq_Supp2BdyEng.rx.Rel =
+IFOut.Trq_Supp2BdyEng.ry.Link =
+IFOut.Trq_Supp2BdyEng.ry.Rel =
+IFOut.WheelOut.FL.Inert_in.Link =
+IFOut.WheelOut.FL.Inert_in.Rel =
+IFOut.WheelOut.FL.Trq_Drive.Link = FMUVar
+IFOut.WheelOut.FL.Trq_Drive.Rel = Trq_Drive_FL
+IFOut.WheelOut.FL.Trq_Supp2WC.Link = FMUVar
+IFOut.WheelOut.FL.Trq_Supp2WC.Rel = Trq_Supp2WC_FL
+IFOut.WheelOut.FR.Inert_in.Link =
+IFOut.WheelOut.FR.Inert_in.Rel =
+IFOut.WheelOut.FR.Trq_Drive.Link = FMUVar
+IFOut.WheelOut.FR.Trq_Drive.Rel = Trq_Drive_FR
+IFOut.WheelOut.FR.Trq_Supp2WC.Link = FMUVar
+IFOut.WheelOut.FR.Trq_Supp2WC.Rel = Trq_Supp2WC_FR
+IFOut.WheelOut.RL.Inert_in.Link =
+IFOut.WheelOut.RL.Inert_in.Rel =
+IFOut.WheelOut.RL.Trq_Drive.Link = FMUVar
+IFOut.WheelOut.RL.Trq_Drive.Rel = Trq_Drive_RL
+IFOut.WheelOut.RL.Trq_Supp2WC.Link = FMUVar
+IFOut.WheelOut.RL.Trq_Supp2WC.Rel = Trq_Supp2WC_RL
+IFOut.WheelOut.RR.Inert_in.Link =
+IFOut.WheelOut.RR.Inert_in.Rel =
+IFOut.WheelOut.RR.Trq_Drive.Link = FMUVar
+IFOut.WheelOut.RR.Trq_Drive.Rel = Trq_Drive_RR
+IFOut.WheelOut.RR.Trq_Supp2WC.Link = FMUVar
+IFOut.WheelOut.RR.Trq_Supp2WC.Rel = Trq_Supp2WC_RR
+IFOut.iDiff_mean.Link =
+IFOut.iDiff_mean.Rel =
+
+DDict.Links:
+
+
+# Specifies the driveline mean differential ratio.
+# Default is 3.0
+PowerTrain.DL.iDiff_mean = 4.0
+# Specifies on which position the drive source ds
+# is applied.
+# Following kinds are supported: NoPosition,Center, Front, Rear, FL, FR, RL, RR
+PowerTrain.DL.DriveSourcePos = Front

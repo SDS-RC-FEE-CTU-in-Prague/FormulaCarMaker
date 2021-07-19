@@ -1,0 +1,88 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = IPGRoad 9.0
+FileCreator = CarMaker 9.1.1
+LibVersion = 9.1.1
+Country = DEU
+nLinks = 1
+nJunctions = 1
+nObjects = 64
+nRoutes = 1
+RoadNetworkLength = 974.099682260117
+BBox = -268.476304601192 61.0188872695332 -170.380461080301 49.6044334827947 -12.4427428336184 19.4202508097648
+Route.0.Length = 974.099682260117
+GCS = FlatEarth 0 0 0 50.518755346706 13.6003119355407 0
+RST.Unit = kmh
+RST = 50 100 -1 30 70 50 -1 -1
+Movie = 0.2 1 0.02 2 2 0.25 0.25
+PathMode = -1
+Junction.0.ID = 1
+Junction.0.Knot = 0 0 0
+Junction.0.RST = undefined
+Junction.0.Arm.0.ID = 2
+Junction.0.Arm.0 = 19.9978764785729 0 0
+Junction.0.Arm.1.ID = 3
+Junction.0.Arm.1 = 199.997876478573 0 0
+Junction.0.MainArms = 1 0
+Link.0.ID = 4
+Link.0.Junctions = 0 1 0 0
+Link.0.RST = undefined
+Link.0.RL.ID = 5
+Link.0.Seg.0.ID = 6
+Link.0.Seg.0.Type = File
+Link.0.Seg.0.File = FSC2015_track.kml
+Link.0.Seg.0.FileAddParam = 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 "" 0
+Link.0.Seg.0.Param = 1 0.08 0 0 0 1 1 0
+Link.0.LaneSection.0.ID = 7
+Link.0.LaneSection.0.Start = 0
+Link.0.LaneSection.0.LaneL.0.ID = 10
+Link.0.LaneSection.0.LaneL.0 = 0 2 2 0 0 0 0
+Link.0.LaneSection.0.LaneL.0.ARP = 36 37 38 39 40 41
+Link.0.LaneSection.0.LaneL.0.Width:
+	68 -1 0 0 0 2 0 -999 -999
+Link.0.LaneSection.0.LaneL.1.ID = 12
+Link.0.LaneSection.0.LaneL.1 = 2 2 2 5 0 0 0
+Link.0.LaneSection.0.LaneR.0.ID = 13
+Link.0.LaneSection.0.LaneR.0 = 0 2 2 0 0 0 0
+Link.0.LaneSection.0.LaneR.0.ARP = 42 43 44 45 46 47
+Link.0.LaneSection.0.LaneR.0.Width:
+	69 -1 0 0 0 2 0 -999 -999
+Link.0.LaneSection.0.LaneR.1.ID = 15
+Link.0.LaneSection.0.LaneR.1 = 2 2 2 5 0 0 0
+Link.0.ElevationProfile.ID = 22
+Link.0.ElevationProfile.Params = 0 0.1
+Link.0.ElevationProfile:
+	76 -1 89.655 0 0 0 -999
+	77 -1 209.217 0 0 8 -999
+	78 -1 299.516 0 0 7.8 -999
+	79 -1 363.155 0 0 7 -999
+	80 -1 408.621 0 0 3 -999
+	81 -1 478.909 0 0 0 -999
+LanePath.0 = 52 10 2 10 0.1 0.1
+LanePath.1 = 53 13 2 10 0.1 0.1
+UserPath.0 = 55 4 -1 -2 -2 1
+UserPath.0.Nodes:
+	56 4 0 2 0 0
+	57 4 0 3 0 0
+UserPath.1 = 58 4 -1 -2 -2 -1
+UserPath.1.Nodes:
+	61 4 0 2 -0 0
+	59 4 0 3 -0 0
+UserPath.2 = 62 4 -1 -2 -2 -1
+UserPath.2.Nodes:
+	65 4 0 2 -0 0
+	63 4 0 3 -0 0
+Route.0.ID = 8
+Route.0.Name = Route_0
+Route.0.DrvPath.ID = 9
+Route.0.DrvPath:
+	55
+RL.5.RoadMarking.0.ID = 32 5
+RL.5.RoadMarking.0 = 0 0 0 1 0 0 4 0 2 0 0 0.2 976 1 1 4 ""
+RL.5.RoadMarking.1.ID = 33 5
+RL.5.RoadMarking.1 = 0 0 0 1 -0.1 1 0.1 0 1 0 0 2 0 1 1 4 ""
+RL.5.RoadMarking.2.ID = 34 5
+RL.5.RoadMarking.2 = 0 0 0 1 0.1 -1 0.1 0 1 0 0 2 0 1 1 4 ""
+RL.5.Marker.0.ID = 31 5
+RL.5.Marker.0.Type = DrivManTrigger
+RL.5.Marker.0.Param = 4.99998190488141 0 1 3 0
+MaxUsedObjId = 81

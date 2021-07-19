@@ -1,0 +1,27 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyPowerSupply_FMU
+FMU.Modelclass = PTPowerSupply
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f803}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 1
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Pwr_LV.Link = IFVar
+FMUIn.Pwr_LV.Rel = Pwr_LV
+
+IFVar.BattLV.AOC.Link = FMUVar
+IFVar.BattLV.AOC.Rel = BattLV_AOC
+IFVar.BattLV.Current.Link = FMUVar
+IFVar.BattLV.Current.Rel = BattLV_Current
+IFVar.BattLV.Energy.Link = FMUVar
+IFVar.BattLV.Energy.Rel = BattLV_Energy
+IFVar.BattLV.Pwr_max.Link = FMUVar
+IFVar.BattLV.Pwr_max.Rel = BattLV_Pwr_max
+IFVar.Voltage_LV.Link = FMUVar
+IFVar.Voltage_LV.Rel = Voltage_LV

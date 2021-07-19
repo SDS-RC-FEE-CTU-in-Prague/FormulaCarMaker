@@ -1,0 +1,69 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyMotor_FMU
+FMU.Modelclass = PTMotor
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f122}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Load.Link = IFVar
+FMUIn.Load.Rel = Load
+FMUIn.Ratio.Link = IFVar
+FMUIn.Ratio.Rel = CfgIF.Ratio
+FMUIn.rotv.Link = IFVar
+FMUIn.rotv.Rel = rotv
+
+IFVar.Inert.Link = FMUVar
+IFVar.Inert.Rel = Inert
+IFVar.PwrElec.Link = FMUVar
+IFVar.PwrElec.Rel = PwrElec
+IFVar.Trq.Link = FMUVar
+IFVar.Trq.Rel = Trq
+
+# Specifies the voltage level (LV, HV1 or HV2)
+# of the power supply model to which the electric
+# motor is connected.
+PowerTrain.Motor.VoltageLevel = LV
+# Ratio between electric motor shaft and driven shaft.
+# Default is 1.0
+PowerTrain.Motor.Ratio = 4.0
+# Maximum electric motor rotation speed.
+# Default is 8000rpm
+PowerTrain.Motor.Mot.rotv_max = 7000.0
+# One dimensional characteristic mapping for
+# the maximum motor torque.
+PowerTrain.Motor.Mot.TrqMap:
+	0.00 50.00
+	400.0 50.00
+	750.0 27.0
+	1000.0 20
+	2000.0 10
+	3000.0 6.7
+	4000.0 5
+	5000.0 4
+	6000.0 3.3
+	7000.0 2.85
+# Maximum electric generator rotation speed.
+# Default is 8000rpm
+PowerTrain.Motor.Gen.rotv_max = 7000
+# One dimensional characteristic mapping for
+# the maximum generator torque.
+PowerTrain.Motor.Gen.TrqMap:
+	0.00 50.00
+	400.0 50.00
+	750.0 27.0
+	1000.0 20
+	2000.0 10
+	3000.0 6.7
+	4000.0 5
+	5000.0 4
+	6000.0 3.3
+	7000.0 2.85
+# Specifies the motor body mass.
+PowerTrain.Motor.Bdy.mass = 0.0

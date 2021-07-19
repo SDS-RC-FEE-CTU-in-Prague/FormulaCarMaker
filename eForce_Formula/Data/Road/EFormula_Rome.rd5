@@ -1,0 +1,85 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = IPGRoad 9.0
+FileCreator = CarMaker 9.1.1
+LibVersion = 9.1.1
+Country = DEU
+nLinks = 1
+nJunctions = 0
+nObjects = 76
+nRoutes = 3
+RoadNetworkLength = 2850.0912350426
+BBox = -815.379308450381 809.539592088983 -254.312212342102 274.124819801145 -11 11
+Route.0.Length = 2850.0912350426
+Route.1.Length = 2850.0912350426
+Route.2.Length = 2850.0912350426
+GCS = FlatEarth 0 0 0 41.8326131498417 12.4702360536179 0
+RST.Unit = kmh
+RST = 50 130 130 30 70 30 0 -1
+Movie = 0.2 1 0.02 1.5 1.5 1 1
+PathMode = -1
+Link.0.ID = 1
+Link.0.Junctions = -1 -1 -2 -1
+Link.0.Node0 = 0 0 0 0.0517067941928712
+Link.0.RST = countryroad
+Link.0.RL.ID = 2
+Link.0.Seg.0.ID = 3
+Link.0.Seg.0.Type = File
+Link.0.Seg.0.File = Formula_E_Rome.kml
+Link.0.Seg.0.FileAddParam = 0 1 1 0 0 0 0 0 0 0 1 1 1 0 0 "" 0
+Link.0.Seg.0.Param = 0 0.1 0.1 0.1 0 1 1 0
+Link.0.LaneSection.0.ID = 4
+Link.0.LaneSection.0.Start = 0
+Link.0.LaneSection.0.LaneL.0.ID = 7
+Link.0.LaneSection.0.LaneL.0 = 0 4 4 0 0 0 0
+Link.0.LaneSection.0.LaneL.0.ARP = 30 31 32 33 34 35
+Link.0.LaneSection.0.LaneL.1.ID = 9
+Link.0.LaneSection.0.LaneL.1 = 0 0.5 0.5 4 0 0 0
+Link.0.LaneSection.0.LaneL.1.ARP = 36 37 38 39 40 41
+Link.0.LaneSection.0.LaneL.2.ID = 10
+Link.0.LaneSection.0.LaneL.2 = 0 2.5 2.5 5 0 0 0
+Link.0.LaneSection.0.LaneR.0.ID = 11
+Link.0.LaneSection.0.LaneR.0 = 0 4 4 0 0 0 0
+Link.0.LaneSection.0.LaneR.0.ARP = 42 43 44 45 46 47
+Link.0.LaneSection.0.LaneR.1.ID = 13
+Link.0.LaneSection.0.LaneR.1 = 0 0.5 0.5 4 0 0 0
+Link.0.LaneSection.0.LaneR.1.ARP = 48 49 50 51 52 53
+Link.0.LaneSection.0.LaneR.2.ID = 14
+Link.0.LaneSection.0.LaneR.2 = 0 2.5 2.5 5 0 0 0
+LanePath.0 = 57 7 2 10 0.1 0.1
+LanePath.1 = 58 9 0.25 10 0.1 0.1
+LanePath.2 = 59 11 2 10 0.1 0.1
+LanePath.3 = 60 13 0.25 10 0.1 0.1
+UserPath.0 = 62 1 1 -2 -2 1
+UserPath.0.Nodes:
+	63 1 0 2 0 0
+	64 1 0 3 0 0
+UserPath.1 = 66 1 1 -2 -2 1
+UserPath.1.Nodes:
+	67 1 0 2 0 0
+	68 1 0 3 0 0
+UserPath.2 = 70 1 1 -2 -2 1
+UserPath.2.Nodes:
+	71 1 0 2 0 0
+	72 1 0 3 0 0
+Route.0.ID = 54
+Route.0.Name = Route_0
+Route.0.DrvPath.ID = 61
+Route.0.DrvPath:
+	62
+Route.1.ID = 55
+Route.1.Name = Route_1
+Route.1.DrvPath.ID = 65
+Route.1.DrvPath:
+	66
+Route.2.ID = 56
+Route.2.Name = Route_2
+Route.2.DrvPath.ID = 69
+Route.2.DrvPath:
+	70
+RL.2.RoadMarking.0.ID = 8 7
+RL.2.RoadMarking.0 = 0 0 0 1 0 1 0.15 0 1 0 0 2 4 1 1 0 ""
+RL.2.RoadMarking.0.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+RL.2.RoadMarking.1.ID = 12 11
+RL.2.RoadMarking.1 = 0 0 0 1 0 -1 0.15 0 1 0 0 2 4 1 1 0 ""
+RL.2.RoadMarking.1.Material.0 = 1.0,1.0,1.0 0 0 0 0 0 0 0 0 0 0 0
+MaxUsedObjId = 72

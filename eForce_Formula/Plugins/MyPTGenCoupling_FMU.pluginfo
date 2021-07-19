@@ -1,0 +1,24 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyPTGenCoupling_FMU
+FMU.Modelclass = PTGenCoupling
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f532}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.drotv_A2B.Link = IFVar
+FMUIn.drotv_A2B.Rel = drotv_A2B
+
+IFVar.Trq_A2B.Link = FMUVar
+IFVar.Trq_A2B.Rel = Trq_A2B
+
+# Apecifies the coupling type.
+# Following coupling types are supported:
+# Unknown, NotLockable, Lockable, FullyActive
+PowerTrain.DL.Cpl.CplType = NotLockable

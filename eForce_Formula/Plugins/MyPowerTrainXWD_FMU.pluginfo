@@ -1,0 +1,98 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyPowerTrainXWD_FMU
+FMU.Modelclass = PowerTrainXWD
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f911}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.iDiff_mean.Link = IFVar
+FMUIn.iDiff_mean.Rel = CfgIF.DriveLine.iDiff_mean
+FMUIn.Motor_Load.Link = IFVar
+FMUIn.Motor_Load.Rel = MotorIn.m0.Load
+FMUIn.WheelIn_FL_rotv.Link = IFVar
+FMUIn.WheelIn_FL_rotv.Rel = WheelIn.FL.rotv
+FMUIn.WheelIn_FR_rotv.Link = IFVar
+FMUIn.WheelIn_FR_rotv.Rel = WheelIn.FR.rotv
+
+IFVar.BattHVOut.Pwr_max.Link = FMUVar
+IFVar.BattHVOut.Pwr_max.Rel = BattHV_Pwr_max
+IFVar.MotorOut.m0.PwrElec.Link = FMUVar
+IFVar.MotorOut.m0.PwrElec.Rel = Motor_PwrElec
+IFVar.MotorOut.m0.Trq.Link = FMUVar
+IFVar.MotorOut.m0.Trq.Rel = Motor_Trq
+IFVar.MotorOut.m0.rotv.Link = FMUVar
+IFVar.MotorOut.m0.rotv.Rel = Motor_rotv
+IFVar.Trq_Supp2Bdy1.ry.Link = FMUVar
+IFVar.Trq_Supp2Bdy1.ry.Rel = Trq_Supp2Bdy1_y_
+IFVar.Trq_Supp2Bdy1B.ry.Link = FMUVar
+IFVar.Trq_Supp2Bdy1B.ry.Rel = Trq_Supp2Bdy1B_y_
+IFVar.WheelOut.FL.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.FL.Trq_Drive.Rel = Trq_Drive_FL
+IFVar.WheelOut.FL.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.FL.Trq_Supp2WC.Rel = Trq_Supp2WC_FL
+IFVar.WheelOut.FR.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.FR.Trq_Drive.Rel = Trq_Drive_FR
+IFVar.WheelOut.FR.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.FR.Trq_Supp2WC.Rel = Trq_Supp2WC_FR
+IFVar.WheelOut.RL.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.RL.Trq_Drive.Rel = Trq_Drive_RL
+IFVar.WheelOut.RL.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.RL.Trq_Supp2WC.Rel = Trq_Supp2WC_RL
+IFVar.WheelOut.RR.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.RR.Trq_Drive.Rel = Trq_Drive_RR
+IFVar.WheelOut.RR.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.RR.Trq_Supp2WC.Rel = Trq_Supp2WC_RR
+
+# Specifies the kind of the OpenXWD powertrain model.
+# Following kinds are supported: Generic,
+# HEV_Parallel_P1,HEV_Parallel_P2, HEV_AxleSplit,
+# HEV_PowerSplit, HEV_Serial, HEV_Any, BEV.
+PowerTrain.PTKind = BEV
+# Specifies the clutch kind used.
+# Following kinds are supported: Closed,
+# Open, Friction, Converter.
+PowerTrain.Clutch.ClKind = Closed
+# Specifies the number of gearboxes for electric
+# motors (without integration starter motor).
+# Default is 0
+PowerTrain.nGearBoxM = 0
+# Specifies the kind of the gearbox used.
+# Following kinds are supported: NoGearBox,
+# Manual, AutoWithManual, AutoNoManual.
+PowerTrain.GearBox.GBKind = NoGearBox
+# Specifies the total number of electric motors
+# (without integrated starter generator motor).
+# Default is 0
+PowerTrain.nMotor = 1
+PowerTrain.Motor.VoltageLevel = HV1
+PowerTrain.Motor.Ratio = 1.0
+PowerTrain.Motor.Mot.rotv_max = 10000.0
+PowerTrain.Motor.Gen.rotv_max = 0.0
+PowerTrain.Motor.Mot.TrqMap:
+	0      300.0
+	700    300.0
+	1400   150.0
+	2100   100.0
+	3000    75.0
+	8000    20.0
+PowerTrain.Motor.Gen.TrqMap:
+	0.00 0.00
+	0.0 0.00
+# Specifies the driveline mean differential ratio.
+# Default is 3.0
+PowerTrain.DL.iDiff_mean = 4.0
+# Specifies the number of possible drive sources
+# of the driveline.
+# Default is 1
+PowerTrain.DL.nDriveSource = 1
+# Specifies on which position the drive source ds
+# is applied.
+# Following kinds are supported: NoPosition,Center, Front, Rear, FL, FR, RL, RR
+PowerTrain.DL.DriveSourcePos = Front

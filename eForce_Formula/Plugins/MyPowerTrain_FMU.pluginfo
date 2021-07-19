@@ -1,0 +1,112 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyPowerTrain_FMU
+FMU.Modelclass = PowerTrain
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f113}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Gas.Link = IFVar
+FMUIn.Gas.Rel = Gas
+FMUIn.Irot_FL.Link = IFVar
+FMUIn.Irot_FL.Rel = CfgIF.FL.Iyy
+FMUIn.Irot_FR.Link = IFVar
+FMUIn.Irot_FR.Rel = CfgIF.FR.Iyy
+FMUIn.Irot_RL.Link = IFVar
+FMUIn.Irot_RL.Rel = CfgIF.RL.Iyy
+FMUIn.Irot_RR.Link = IFVar
+FMUIn.Irot_RR.Rel = CfgIF.RR.Iyy
+FMUIn.SC_State.Link = DDictVar
+FMUIn.SC_State.Rel = SC.State
+FMUIn.Trq_Brake_FL.Link = IFVar
+FMUIn.Trq_Brake_FL.Rel = WheelIn.FL.Trq_Brake
+FMUIn.Trq_Brake_FR.Link = IFVar
+FMUIn.Trq_Brake_FR.Rel = WheelIn.FR.Trq_Brake
+FMUIn.Trq_Brake_RL.Link = IFVar
+FMUIn.Trq_Brake_RL.Rel = WheelIn.RL.Trq_Brake
+FMUIn.Trq_Brake_RR.Link = IFVar
+FMUIn.Trq_Brake_RR.Rel = WheelIn.RR.Trq_Brake
+FMUIn.Trq_T2W_FL.Link = IFVar
+FMUIn.Trq_T2W_FL.Rel = WheelIn.FL.Trq_T2W
+FMUIn.Trq_T2W_FR.Link = IFVar
+FMUIn.Trq_T2W_FR.Rel = WheelIn.FR.Trq_T2W
+FMUIn.Trq_T2W_RL.Link = IFVar
+FMUIn.Trq_T2W_RL.Rel = WheelIn.RL.Trq_T2W
+FMUIn.Trq_T2W_RR.Link = IFVar
+FMUIn.Trq_T2W_RR.Rel = WheelIn.RR.Trq_T2W
+FMUIn.Trq_WhlBearing_FL.Link = IFVar
+FMUIn.Trq_WhlBearing_FL.Rel = WheelIn.FL.Trq_WhlBearing
+FMUIn.Trq_WhlBearing_FR.Link = IFVar
+FMUIn.Trq_WhlBearing_FR.Rel = WheelIn.FR.Trq_WhlBearing
+FMUIn.Trq_WhlBearing_RL.Link = IFVar
+FMUIn.Trq_WhlBearing_RL.Rel = WheelIn.RL.Trq_WhlBearing
+FMUIn.Trq_WhlBearing_RR.Link = IFVar
+FMUIn.Trq_WhlBearing_RR.Rel = WheelIn.RR.Trq_WhlBearing
+
+IFVar.OperationState.Link = FMUVar
+IFVar.OperationState.Rel = OperationState
+IFVar.Trq_Supp2Bdy1.ry.Link = FMUVar
+IFVar.Trq_Supp2Bdy1.ry.Rel = Trq_Supp2Bdy1B_y_
+IFVar.Trq_Supp2Bdy1B.ry.Link = FMUVar
+IFVar.Trq_Supp2Bdy1B.ry.Rel = Trq_Supp2Bdy1_y_
+IFVar.WheelOut.FL.Trq_B2W.Link = FMUVar
+IFVar.WheelOut.FL.Trq_B2W.Rel = Trq_B2W_FL
+IFVar.WheelOut.FL.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.FL.Trq_Drive.Rel = Trq_Drive_FL
+IFVar.WheelOut.FL.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.FL.Trq_Supp2WC.Rel = Trq_Supp2WC_FL
+IFVar.WheelOut.FL.rot.Link = FMUVar
+IFVar.WheelOut.FL.rot.Rel = rot_FL
+IFVar.WheelOut.FL.rotv.Link = FMUVar
+IFVar.WheelOut.FL.rotv.Rel = rotv_FL
+IFVar.WheelOut.FR.Trq_B2W.Link = FMUVar
+IFVar.WheelOut.FR.Trq_B2W.Rel = Trq_B2W_FR
+IFVar.WheelOut.FR.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.FR.Trq_Drive.Rel = Trq_Drive_FR
+IFVar.WheelOut.FR.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.FR.Trq_Supp2WC.Rel = Trq_Supp2WC_FR
+IFVar.WheelOut.FR.rot.Link = FMUVar
+IFVar.WheelOut.FR.rot.Rel = rot_FR
+IFVar.WheelOut.FR.rotv.Link = FMUVar
+IFVar.WheelOut.FR.rotv.Rel = rotv_FR
+IFVar.WheelOut.RL.Trq_B2W.Link = FMUVar
+IFVar.WheelOut.RL.Trq_B2W.Rel = Trq_B2W_RL
+IFVar.WheelOut.RL.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.RL.Trq_Drive.Rel = Trq_Drive_RL
+IFVar.WheelOut.RL.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.RL.Trq_Supp2WC.Rel = Trq_Supp2WC_RL
+IFVar.WheelOut.RL.rot.Link = FMUVar
+IFVar.WheelOut.RL.rot.Rel = rot_RL
+IFVar.WheelOut.RL.rotv.Link = FMUVar
+IFVar.WheelOut.RL.rotv.Rel = rotv_RL
+IFVar.WheelOut.RR.Trq_B2W.Link = FMUVar
+IFVar.WheelOut.RR.Trq_B2W.Rel = Trq_B2W_RR
+IFVar.WheelOut.RR.Trq_Drive.Link = FMUVar
+IFVar.WheelOut.RR.Trq_Drive.Rel = Trq_Drive_RR
+IFVar.WheelOut.RR.Trq_Supp2WC.Link = FMUVar
+IFVar.WheelOut.RR.Trq_Supp2WC.Rel = Trq_Supp2WC_RR
+IFVar.WheelOut.RR.rot.Link = FMUVar
+IFVar.WheelOut.RR.rot.Rel = rot_RR
+IFVar.WheelOut.RR.rotv.Link = FMUVar
+IFVar.WheelOut.RR.rotv.Rel = rotv_RR
+
+# Specifies the kind of the powertrain model.
+# Following kinds are supported: Generic,
+# HEV_Parallel_P1, HEV_Parallel_P2, HEV_AxleSplit,
+# HEV_PowerSplit, HEV_Serial, HEV_Any, BEV.
+PowerTrain.PTKind = BEV
+# Control element for switching operation states:
+# 1 = switch operation states with start button
+# 0 = switch operation states with key only
+# Default is 1
+PowerTrain.Control.StartEngineWithSST = 0
+# Specifies the kind of the gearbox.
+# Following kinds are supported: NoGearBox,
+# Manual, AutoWithManual, AutoNoManual.
+PowerTrain.GearBox.GBKind = NoGearBox

@@ -1,0 +1,228 @@
+#
+# Animated Arrow example "Animated_Visual_Torque"
+#
+# Adds an animated "force" arrow dependent on the Visual forces:
+# Visual.Trq_1.x, Visual.Trq_1.y, Visual.Trq_1.z and Car.ax for color change
+#
+### BEGIN IPG-MOVIE-INFO
+# Subscribe Visual.Frc_1.x
+# Subscribe Visual.Frc_1.y
+# Subscribe Visual.Frc_1.z
+# Subscribe Visual.Trq_1.x
+# Subscribe Visual.Trq_1.y
+# Subscribe Visual.Trq_1.z
+# Subscribe Visual.PoA.x
+# Subscribe Visual.PoA.y
+# Subscribe Visual.PoA.z
+### END IPG-MOVIE-INFO
+
+
+#Color of Arrow
+set ColorTab {
+    -10.0   { 0.8 0.2 0.2  1.0 }
+    -0.05   { 0.5 0.1 0.1  1.0 }
+    -0.05   { 0.5 0.5 0.5  0.8 }
+    +0.05   { 0.5 0.5 0.5  0.8 }
+    +0.05   { 0.1 0.2 0.5  1.0 }
+    +10.0   { 0.2 0.8 0.2  1.0 }
+}
+
+set Torque_Scale 0.0004
+set frcArrowLength 0
+set frcArrowWidth 0
+set frcArrowHeight 0
+set trqMagnitude_asin 0
+set frcMagnitude_asin 0
+set Force_Scale 0.0004
+set Rad2Deg 57.2958
+
+
+
+# FrcArrow_Parameter
+set frc_h0 0.8;    # Height of Cylinder
+set frc_h1 0.3;   # Height of Cone
+set frc_slices 18; # Slices of Cylinder/Cone
+set frc_stacks 2;  # Stacks of Cylinder/Cone
+set frc_b0 0.09;   # Base diameter of Cylinder
+set frc_b1 0.16;   # Base diameter of Cone
+set frc_t1 0.0;    # Top diameter of Cone
+
+# Generation of the force arrow object
+set FrcArrowObj [gl newlist -1 compile]
+  gl enable cull_face
+  gl material f+b shininess 0
+  gl material f+b emission 0 0 0
+  gl material f+b specular 0 0 0 1
+  gl translate 0 0 [expr {-$frc_h1-$frc_h0}]
+  gl Cylinder $frc_b0 $frc_b0 $frc_h0 $frc_slices $frc_stacks
+  gl translate 0 0 $frc_h0
+  gl Cylinder $frc_b1 $frc_t1 $frc_h1 $frc_slices $frc_stacks
+  gl rotate 180 1 0 0
+  gl Disk 0 $frc_b1 $frc_slices 1
+  gl translate 0 0 $frc_h0
+  gl Disk 0 $frc_b0 $frc_slices 1
+  gl disable cull_face
+gl endlist
+
+
+
+# TrqArrow Parameter
+set trq_h0 1.0;    # Height of Cylinder
+set trq_h1 0.5;    # Height of Cone
+set trq_slices 18; # Slices of Cylinder/Cone
+set trq_stacks 2;  # Stacks of Cylinder/Cone
+set trq_b0 0.12;   # Base diameter of Cylinder
+set trq_b1 0.25;   # Base diameter of Cone
+set trq_t1 0.0;    # Top diameter of Cone
+
+# Generation of the torque arrow object
+set TrqArrowObj [gl newlist -1 compile]
+  gl enable cull_face
+  gl material f+b shininess 0
+  gl material f+b emission 0 0 0
+  gl material f+b specular 0 0 0 1
+  #gl translate 0 0 [expr {-$trq_h1-$trq_h0}]
+
+  # Write Torque arrow
+  set numc 24
+  set numt 24
+  set twopi [expr {2 * 3.14159}]
+
+  # Scale of arrow should be done here
+  for {set i 0} {$i<$numc} {incr i} {
+  gl begin quad_strip
+     for {set j 0} {$j<$numt-4} {incr j} {
+         for {set k 1} {$k>=0} {incr k -1} {
+
+            set s [expr {($i + $k) % $numc + 0.5}]
+            set t [expr { $j % $numt}]
+
+            set x [expr {(1+.1*cos($s*$twopi/$numc))*cos($t*$twopi/$numt)}]
+            set y [expr {(1+.1*cos($s*$twopi/$numc))*sin($t*$twopi/$numt)}]
+            set z [expr {.1 * sin($s * $twopi / $numc)}]
+            gl vertex $x $y $z
+         }
+     }
+     gl end
+  }
+  
+  #gl scale -1 -1 -1
+  #gl Disk 0 $trq_b0 $trq_slices 1 #Finish of arrow doesnt work
+  #gl rotate -90 0 0 1
+  #gl rotate -90 0 1 0
+  gl rotate 90 0 1 0
+  gl rotate 90 1 0 0
+  gl translate 0 $trq_h0 -0.2
+  gl Cylinder $trq_b1 $trq_t1 $trq_h1 $trq_slices $trq_stacks
+  gl rotate 180 1 0 0
+  gl Disk 0 $trq_b1 $trq_slices 1
+  gl translate 0 0 $trq_h0
+
+
+  gl disable cull_face
+  gl endlist
+
+### periodic update function, called for every frame ###
+
+proc DrawVehicle {} {
+    upvar Qu Qu
+    global Scene
+
+    variable ColorTab
+    variable trqMagnitude_asin
+    variable trqArrowSize
+    variable Torque_Scale
+    variable frcMagnitude_asin
+    variable frcArrowLength
+    variable Force_Scale
+    variable Rad2Deg
+    variable color
+    variable TrqArrowObj
+    variable FrcArrowObj
+
+    
+    #TRQ Arrow
+    gl pushmatrix
+    gl material f+b a+d {*}[MapVec $ColorTab $Qu(Visual.Trq_1.z)]
+    gl translate $Qu(Visual.PoA.x) $Qu(Visual.PoA.y) $Qu(Visual.PoA.z)
+
+    set Torque_x $Qu(Visual.Trq_1.x)
+    set Torque_y $Qu(Visual.Trq_1.y)
+    set Torque_z $Qu(Visual.Trq_1.z)
+
+    set ges [expr { abs($Torque_x) + abs($Torque_y) + abs($Torque_z) }]
+
+    if {$ges > 0} {
+       set magnitude [expr {sqrt(($Torque_x * $Torque_x) + ($Torque_y * $Torque_y) + ($Torque_z * $Torque_z)) }]
+       set trqMagnitude_asin [expr {$Torque_z / $magnitude}]
+       set trqArrowSize [expr (  $magnitude * $Torque_Scale + 0.04)]
+
+       # "Mirror" for better indication
+       if {$Torque_z > 0} {
+           gl rotate 180 0 0 1
+       }
+
+    } else {
+        set trqArrowSize 0
+    }
+
+    #Calculation of azimut angle
+    set azimut_deg [expr { $Rad2Deg * atan2($Torque_y, $Torque_x)}]
+    #Calculation of elevation angle
+    set elevation_deg [expr 90 + { $Rad2Deg * asin( $trqMagnitude_asin)}]
+    #Rotate object 
+    
+    gl rotate $azimut_deg  0 0 1
+    gl rotate $elevation_deg 0 1 0
+    gl scale $trqArrowSize $trqArrowSize $trqArrowSize
+    gl call $TrqArrowObj
+    gl popmatrix
+
+
+    # FRC Arrow
+    gl pushmatrix
+
+
+    set color [expr {$Qu(Visual.Frc_1.z)*1}]
+    gl material f+b a+d {*}[MapVec $ColorTab $color]
+
+    #gl material f+b a+d {*}[MapVec $ColorTab #Qu(Visual.Frc_1.z)]
+    gl translate $Qu(Visual.PoA.x) $Qu(Visual.PoA.y) $Qu(Visual.PoA.z)
+
+    set Force_x $Qu(Visual.Frc_1.x)
+    set Force_y $Qu(Visual.Frc_1.y)
+    set Force_z $Qu(Visual.Frc_1.z)
+
+    set ges [expr { abs($Force_x ) + abs($Force_y) + abs($Force_z) }]
+
+    if {$ges > 0} {
+        set magnitude [expr {sqrt(($Force_x * $Force_x) + ($Force_y * $Force_y) + ($Force_z * $Force_z)) }]
+        set frcMagnitude_asin [expr {-$Force_z / $magnitude}]
+        set arrowLength [expr (  $magnitude * $Force_Scale )]
+        set arrowWidth 0.2
+    } else {
+        set arrowLength 0
+        set arrowWidth 0
+    }
+
+#set trqMagnitude_asin [expr (Qu(Visual.Frc_1.z)/2000)]
+
+    #gl material f+b a+d {*}[MapVec $ColorTab $frcMagnitude_asin]
+
+    #Calculation of azimut angle
+    set azimut_deg [expr { $Rad2Deg * atan2($Force_y, $Force_x)}]
+    #Calculation of elevation angle
+    set elevation_deg [expr 90 + { $Rad2Deg * asin( $frcMagnitude_asin)}]
+    #Rotate object 
+    
+    gl rotate $azimut_deg  0 0 1
+    gl rotate $elevation_deg 0 1 0
+    gl scale $arrowWidth $arrowWidth $arrowLength
+    gl call $FrcArrowObj
+    gl popmatrix
+}
+
+
+# no static object
+return 0
+

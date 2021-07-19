@@ -1,0 +1,57 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyVhclOperator_FMU
+FMU.Modelclass = VhclOperator
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c91150}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.BrakePark_In.Link = IFVar
+FMUIn.BrakePark_In.Rel = BrakePark
+FMUIn.Brake_In.Link = IFVar
+FMUIn.Brake_In.Rel = Brake
+FMUIn.Clutch_In.Link = IFVar
+FMUIn.Clutch_In.Rel = Clutch
+FMUIn.Gas_In.Link = IFVar
+FMUIn.Gas_In.Rel = Gas
+FMUIn.GearBoxKind.Link = IFVar
+FMUIn.GearBoxKind.Rel = CfgIF.GearBoxKind
+FMUIn.GearNo_In.Link = IFVar
+FMUIn.GearNo_In.Rel = GearNo
+FMUIn.Key_In.Link = IFVar
+FMUIn.Key_In.Rel = Key
+FMUIn.OperationState.Link = IFVar
+FMUIn.OperationState.Rel = OperationState
+FMUIn.OperationState_trg.Link = IFVar
+FMUIn.OperationState_trg.Rel = OperationState_trg
+FMUIn.SelectorCtrl_In.Link = IFVar
+FMUIn.SelectorCtrl_In.Rel = SelectorCtrl
+FMUIn.SteeringAng_In.Link = IFVar
+FMUIn.SteeringAng_In.Rel = Steering.Ang
+FMUIn.Velocity.Link = IFVar
+FMUIn.Velocity.Rel = Velocity
+
+IFVar.Brake.Link = FMUVar
+IFVar.Brake.Rel = Brake
+IFVar.BrakePark.Link = FMUVar
+IFVar.BrakePark.Rel = BrakePark
+IFVar.Clutch.Link = FMUVar
+IFVar.Clutch.Rel = Clutch
+IFVar.Gas.Link = FMUVar
+IFVar.Gas.Rel = Gas
+IFVar.GearNo.Link = FMUVar
+IFVar.GearNo.Rel = GearNo
+IFVar.Key.Link = FMUVar
+IFVar.Key.Rel = Key
+IFVar.OperatorFinished.Link = FMUVar
+IFVar.OperatorFinished.Rel = OperationFinished
+IFVar.SelectorCtrl.Link = FMUVar
+IFVar.SelectorCtrl.Rel = SelectorCtrl
+IFVar.Steering.Ang.Link = FMUVar
+IFVar.Steering.Ang.Rel = SteeringAng

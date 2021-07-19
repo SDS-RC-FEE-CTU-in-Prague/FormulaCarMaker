@@ -1,0 +1,107 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 6.0pre 2017-01-27 09:38 TEMPLATE
+
+FMU.Name = MyTransmCU_FMU
+FMU.Modelclass = PTTransmCU
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c90803}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.GearBox.Clutch.rotv_out.Link = IFVar
+FMUIn.GearBox.Clutch.rotv_out.Rel = GearBoxIn.Clutch.rotv_out
+FMUIn.GearNo.Link = IFVar
+FMUIn.GearNo.Rel = GearBoxIn.GearNo
+FMUIn.GearNoTrg.Link = IFVar
+FMUIn.GearNoTrg.Rel = GearBoxOut.GearNoTrg
+FMUIn.Ignition.Link = IFVar
+FMUIn.Ignition.Rel = Ignition
+FMUIn.nBGears.Link = IFVar
+FMUIn.nBGears.Rel = CfgIF.GearBox.nBGears
+FMUIn.nFGears.Link = IFVar
+FMUIn.nFGears.Rel = CfgIF.GearBox.nFGears
+FMUIn.SelectorCtrl.Link = IFVar
+FMUIn.SelectorCtrl.Rel = SelectorCtrl
+
+IFOut.ClutchOut.Pos.Link =
+IFOut.ClutchOut.Pos.Rel =
+IFOut.GearBoxM_Out.GB_m0.Clutch.Pos.Link =
+IFOut.GearBoxM_Out.GB_m0.Clutch.Pos.Rel =
+IFOut.GearBoxM_Out.GB_m0.Clutch_dis.Pos.Link =
+IFOut.GearBoxM_Out.GB_m0.Clutch_dis.Pos.Rel =
+IFOut.GearBoxM_Out.GB_m0.GearNoTrg.Link =
+IFOut.GearBoxM_Out.GB_m0.GearNoTrg.Rel =
+IFOut.GearBoxM_Out.GB_m0.GearNoTrg_dis.Link =
+IFOut.GearBoxM_Out.GB_m0.GearNoTrg_dis.Rel =
+IFOut.GearBoxM_Out.GB_m0.Trq_DriveSrc_trg.Link =
+IFOut.GearBoxM_Out.GB_m0.Trq_DriveSrc_trg.Rel =
+IFOut.GearBoxM_Out.GB_m0.i_trg.Link =
+IFOut.GearBoxM_Out.GB_m0.i_trg.Rel =
+IFOut.GearBoxM_Out.GB_m0.set_ParkBrake.Link =
+IFOut.GearBoxM_Out.GB_m0.set_ParkBrake.Rel =
+IFOut.GearBoxM_Out.GB_m1.Clutch.Pos.Link =
+IFOut.GearBoxM_Out.GB_m1.Clutch.Pos.Rel =
+IFOut.GearBoxM_Out.GB_m1.Clutch_dis.Pos.Link =
+IFOut.GearBoxM_Out.GB_m1.Clutch_dis.Pos.Rel =
+IFOut.GearBoxM_Out.GB_m1.GearNoTrg.Link =
+IFOut.GearBoxM_Out.GB_m1.GearNoTrg.Rel =
+IFOut.GearBoxM_Out.GB_m1.GearNoTrg_dis.Link =
+IFOut.GearBoxM_Out.GB_m1.GearNoTrg_dis.Rel =
+IFOut.GearBoxM_Out.GB_m1.Trq_DriveSrc_trg.Link =
+IFOut.GearBoxM_Out.GB_m1.Trq_DriveSrc_trg.Rel =
+IFOut.GearBoxM_Out.GB_m1.i_trg.Link = DDictVar
+IFOut.GearBoxM_Out.GB_m1.i_trg.Rel = UserOut_04
+IFOut.GearBoxM_Out.GB_m1.set_ParkBrake.Link =
+IFOut.GearBoxM_Out.GB_m1.set_ParkBrake.Rel =
+IFOut.GearBoxM_Out.GB_m2.Clutch.Pos.Link =
+IFOut.GearBoxM_Out.GB_m2.Clutch.Pos.Rel =
+IFOut.GearBoxM_Out.GB_m2.Clutch_dis.Pos.Link =
+IFOut.GearBoxM_Out.GB_m2.Clutch_dis.Pos.Rel =
+IFOut.GearBoxM_Out.GB_m2.GearNoTrg.Link =
+IFOut.GearBoxM_Out.GB_m2.GearNoTrg.Rel =
+IFOut.GearBoxM_Out.GB_m2.GearNoTrg_dis.Link =
+IFOut.GearBoxM_Out.GB_m2.GearNoTrg_dis.Rel =
+IFOut.GearBoxM_Out.GB_m2.Trq_DriveSrc_trg.Link =
+IFOut.GearBoxM_Out.GB_m2.Trq_DriveSrc_trg.Rel =
+IFOut.GearBoxM_Out.GB_m2.i_trg.Link =
+IFOut.GearBoxM_Out.GB_m2.i_trg.Rel =
+IFOut.GearBoxM_Out.GB_m2.set_ParkBrake.Link =
+IFOut.GearBoxM_Out.GB_m2.set_ParkBrake.Rel =
+IFOut.GearBoxM_Out.GB_m3.Clutch.Pos.Link =
+IFOut.GearBoxM_Out.GB_m3.Clutch.Pos.Rel =
+IFOut.GearBoxM_Out.GB_m3.Clutch_dis.Pos.Link =
+IFOut.GearBoxM_Out.GB_m3.Clutch_dis.Pos.Rel =
+IFOut.GearBoxM_Out.GB_m3.GearNoTrg.Link =
+IFOut.GearBoxM_Out.GB_m3.GearNoTrg.Rel =
+IFOut.GearBoxM_Out.GB_m3.GearNoTrg_dis.Link =
+IFOut.GearBoxM_Out.GB_m3.GearNoTrg_dis.Rel =
+IFOut.GearBoxM_Out.GB_m3.Trq_DriveSrc_trg.Link =
+IFOut.GearBoxM_Out.GB_m3.Trq_DriveSrc_trg.Rel =
+IFOut.GearBoxM_Out.GB_m3.i_trg.Link =
+IFOut.GearBoxM_Out.GB_m3.i_trg.Rel =
+IFOut.GearBoxM_Out.GB_m3.set_ParkBrake.Link =
+IFOut.GearBoxM_Out.GB_m3.set_ParkBrake.Rel =
+IFOut.GearBoxOut.Clutch.Pos.Link = FMUVar
+IFOut.GearBoxOut.Clutch.Pos.Rel = ClutchPos
+IFOut.GearBoxOut.Clutch_dis.Pos.Link =
+IFOut.GearBoxOut.Clutch_dis.Pos.Rel =
+IFOut.GearBoxOut.GearNoTrg.Link = FMUVar
+IFOut.GearBoxOut.GearNoTrg.Rel = GearNoTrgOut
+IFOut.GearBoxOut.GearNoTrg_dis.Link =
+IFOut.GearBoxOut.GearNoTrg_dis.Rel =
+IFOut.GearBoxOut.Trq_DriveSrc_trg.Link =
+IFOut.GearBoxOut.Trq_DriveSrc_trg.Rel =
+IFOut.GearBoxOut.i_trg.Link =
+IFOut.GearBoxOut.i_trg.Rel =
+IFOut.GearBoxOut.set_ParkBrake.Link = FMUVar
+IFOut.GearBoxOut.set_ParkBrake.Rel = set_ParkBrake
+IFOut.Status.Link =
+IFOut.Status.Rel =
+
+DDict.Links:
+
+

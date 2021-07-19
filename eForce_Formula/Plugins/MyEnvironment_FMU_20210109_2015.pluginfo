@@ -1,0 +1,35 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 5.0.3pre 2015-10-07 08:28 TEMPLATE
+
+FMU.Name = MyEnvironment_FMU
+FMU.Modelclass = Environment
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c90820}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+
+IFOut.AirDensity.Link =
+IFOut.AirDensity.Rel =
+IFOut.AirHumidity.Link =
+IFOut.AirHumidity.Rel =
+IFOut.AirPressure.Link = FMUVar
+IFOut.AirPressure.Rel = AirPressure_out
+IFOut.SolarRadiation.Link =
+IFOut.SolarRadiation.Rel =
+IFOut.Temperature.Link = FMUVar
+IFOut.Temperature.Rel = Temperature_out
+IFOut.WindVel_0.x.Link =
+IFOut.WindVel_0.x.Rel =
+IFOut.WindVel_0.y.Link =
+IFOut.WindVel_0.y.Rel =
+IFOut.WindVel_0.z.Link =
+IFOut.WindVel_0.z.Rel =
+
+DDict.Links:
+
+

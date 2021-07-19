@@ -1,0 +1,174 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 6.0pre 2017-02-22 14:13 TEMPLATE
+
+FMU.Name = MyDriveLine_FMU
+FMU.Modelclass = PTDriveLine
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f025}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Inert_in.Link = IFVar
+FMUIn.Inert_in.Rel = DriveIn.d0.Inert_in
+FMUIn.Irot_FL.Link = IFVar
+FMUIn.Irot_FL.Rel = CfgIF.Wheel_Iyy_FL
+FMUIn.Irot_FR.Link = IFVar
+FMUIn.Irot_FR.Rel = CfgIF.Wheel_Iyy_FR
+FMUIn.Irot_RL.Link = IFVar
+FMUIn.Irot_RL.Rel = CfgIF.Wheel_Iyy_RL
+FMUIn.Irot_RR.Link = IFVar
+FMUIn.Irot_RR.Rel = CfgIF.Wheel_Iyy_RR
+FMUIn.SimCore_State.Link = DDictVar
+FMUIn.SimCore_State.Rel = SC.State
+FMUIn.Trq_Brake_FL.Link = IFVar
+FMUIn.Trq_Brake_FL.Rel = WheelIn.FL.Trq_Brake
+FMUIn.Trq_Brake_FR.Link = IFVar
+FMUIn.Trq_Brake_FR.Rel = WheelIn.FR.Trq_Brake
+FMUIn.Trq_Brake_RL.Link = IFVar
+FMUIn.Trq_Brake_RL.Rel = WheelIn.RL.Trq_Brake
+FMUIn.Trq_Brake_RR.Link = IFVar
+FMUIn.Trq_Brake_RR.Rel = WheelIn.RR.Trq_Brake
+FMUIn.Trq_in.Link = IFVar
+FMUIn.Trq_in.Rel = DriveIn.d0.Trq_in
+FMUIn.Trq_T2W_FL.Link = IFVar
+FMUIn.Trq_T2W_FL.Rel = WheelIn.FL.Trq_T2W
+FMUIn.Trq_T2W_FR.Link = IFVar
+FMUIn.Trq_T2W_FR.Rel = WheelIn.FR.Trq_T2W
+FMUIn.Trq_T2W_RL.Link = IFVar
+FMUIn.Trq_T2W_RL.Rel = WheelIn.RL.Trq_T2W
+FMUIn.Trq_T2W_RR.Link = IFVar
+FMUIn.Trq_T2W_RR.Rel = WheelIn.RR.Trq_T2W
+FMUIn.Trq_WhlBearing_FL.Link = IFVar
+FMUIn.Trq_WhlBearing_FL.Rel = WheelIn.FL.Trq_WhlBearing
+FMUIn.Trq_WhlBearing_FR.Link = IFVar
+FMUIn.Trq_WhlBearing_FR.Rel = WheelIn.FR.Trq_WhlBearing
+FMUIn.Trq_WhlBearing_RL.Link = IFVar
+FMUIn.Trq_WhlBearing_RL.Rel = WheelIn.RL.Trq_WhlBearing
+FMUIn.Trq_WhlBearing_RR.Link = IFVar
+FMUIn.Trq_WhlBearing_RR.Rel = WheelIn.RR.Trq_WhlBearing
+
+IFOut.DriveOut.d0.i_D2W.FL.Link =
+IFOut.DriveOut.d0.i_D2W.FL.Rel =
+IFOut.DriveOut.d0.i_D2W.FR.Link =
+IFOut.DriveOut.d0.i_D2W.FR.Rel =
+IFOut.DriveOut.d0.i_D2W.RL.Link =
+IFOut.DriveOut.d0.i_D2W.RL.Rel =
+IFOut.DriveOut.d0.i_D2W.RR.Link =
+IFOut.DriveOut.d0.i_D2W.RR.Rel =
+IFOut.DriveOut.d0.rot_in.Link =
+IFOut.DriveOut.d0.rot_in.Rel =
+IFOut.DriveOut.d0.rotv_in.Link = FMUVar
+IFOut.DriveOut.d0.rotv_in.Rel = rotv_in
+IFOut.DriveOut.d1.i_D2W.FL.Link =
+IFOut.DriveOut.d1.i_D2W.FL.Rel =
+IFOut.DriveOut.d1.i_D2W.FR.Link =
+IFOut.DriveOut.d1.i_D2W.FR.Rel =
+IFOut.DriveOut.d1.i_D2W.RL.Link =
+IFOut.DriveOut.d1.i_D2W.RL.Rel =
+IFOut.DriveOut.d1.i_D2W.RR.Link =
+IFOut.DriveOut.d1.i_D2W.RR.Rel =
+IFOut.DriveOut.d1.rot_in.Link =
+IFOut.DriveOut.d1.rot_in.Rel =
+IFOut.DriveOut.d1.rotv_in.Link =
+IFOut.DriveOut.d1.rotv_in.Rel =
+IFOut.DriveOut.d2.i_D2W.FL.Link =
+IFOut.DriveOut.d2.i_D2W.FL.Rel =
+IFOut.DriveOut.d2.i_D2W.FR.Link =
+IFOut.DriveOut.d2.i_D2W.FR.Rel =
+IFOut.DriveOut.d2.i_D2W.RL.Link =
+IFOut.DriveOut.d2.i_D2W.RL.Rel =
+IFOut.DriveOut.d2.i_D2W.RR.Link =
+IFOut.DriveOut.d2.i_D2W.RR.Rel =
+IFOut.DriveOut.d2.rot_in.Link =
+IFOut.DriveOut.d2.rot_in.Rel =
+IFOut.DriveOut.d2.rotv_in.Link =
+IFOut.DriveOut.d2.rotv_in.Rel =
+IFOut.DriveOut.d3.i_D2W.FL.Link =
+IFOut.DriveOut.d3.i_D2W.FL.Rel =
+IFOut.DriveOut.d3.i_D2W.FR.Link =
+IFOut.DriveOut.d3.i_D2W.FR.Rel =
+IFOut.DriveOut.d3.i_D2W.RL.Link =
+IFOut.DriveOut.d3.i_D2W.RL.Rel =
+IFOut.DriveOut.d3.i_D2W.RR.Link =
+IFOut.DriveOut.d3.i_D2W.RR.Rel =
+IFOut.DriveOut.d3.rot_in.Link =
+IFOut.DriveOut.d3.rot_in.Rel =
+IFOut.DriveOut.d3.rotv_in.Link =
+IFOut.DriveOut.d3.rotv_in.Rel =
+IFOut.Trq_Supp2Bdy1.rx.Link =
+IFOut.Trq_Supp2Bdy1.rx.Rel =
+IFOut.Trq_Supp2Bdy1.ry.Link =
+IFOut.Trq_Supp2Bdy1.ry.Rel =
+IFOut.Trq_Supp2Bdy1.rz.Link =
+IFOut.Trq_Supp2Bdy1.rz.Rel =
+IFOut.Trq_Supp2Bdy1B.rx.Link =
+IFOut.Trq_Supp2Bdy1B.rx.Rel =
+IFOut.Trq_Supp2Bdy1B.ry.Link =
+IFOut.Trq_Supp2Bdy1B.ry.Rel =
+IFOut.Trq_Supp2Bdy1B.rz.Link =
+IFOut.Trq_Supp2Bdy1B.rz.Rel =
+IFOut.Trq_Supp2BdyEng.rx.Link =
+IFOut.Trq_Supp2BdyEng.rx.Rel =
+IFOut.Trq_Supp2BdyEng.ry.Link =
+IFOut.Trq_Supp2BdyEng.ry.Rel =
+IFOut.WheelOut.FL.Trq_B2W.Link = FMUVar
+IFOut.WheelOut.FL.Trq_B2W.Rel = Trq_B2W_FL
+IFOut.WheelOut.FL.Trq_Drive.Link = FMUVar
+IFOut.WheelOut.FL.Trq_Drive.Rel = Trq_Drive_FL
+IFOut.WheelOut.FL.Trq_Supp2WC.Link = FMUVar
+IFOut.WheelOut.FL.Trq_Supp2WC.Rel = Trq_Supp2WC_FL
+IFOut.WheelOut.FL.rot.Link = FMUVar
+IFOut.WheelOut.FL.rot.Rel = rot_FL
+IFOut.WheelOut.FL.rotv.Link = FMUVar
+IFOut.WheelOut.FL.rotv.Rel = rotv_FL
+IFOut.WheelOut.FR.Trq_B2W.Link = FMUVar
+IFOut.WheelOut.FR.Trq_B2W.Rel = Trq_B2W_FR
+IFOut.WheelOut.FR.Trq_Drive.Link = FMUVar
+IFOut.WheelOut.FR.Trq_Drive.Rel = Trq_Drive_FR
+IFOut.WheelOut.FR.Trq_Supp2WC.Link = FMUVar
+IFOut.WheelOut.FR.Trq_Supp2WC.Rel = Trq_Supp2WC_FR
+IFOut.WheelOut.FR.rot.Link = FMUVar
+IFOut.WheelOut.FR.rot.Rel = rot_FR
+IFOut.WheelOut.FR.rotv.Link = FMUVar
+IFOut.WheelOut.FR.rotv.Rel = rotv_FR
+IFOut.WheelOut.RL.Trq_B2W.Link = FMUVar
+IFOut.WheelOut.RL.Trq_B2W.Rel = Trq_B2W_RL
+IFOut.WheelOut.RL.Trq_Drive.Link = FMUVar
+IFOut.WheelOut.RL.Trq_Drive.Rel = Trq_Drive_RL
+IFOut.WheelOut.RL.Trq_Supp2WC.Link = FMUVar
+IFOut.WheelOut.RL.Trq_Supp2WC.Rel = Trq_Supp2WC_RL
+IFOut.WheelOut.RL.rot.Link = FMUVar
+IFOut.WheelOut.RL.rot.Rel = rot_RL
+IFOut.WheelOut.RL.rotv.Link = FMUVar
+IFOut.WheelOut.RL.rotv.Rel = rotv_RL
+IFOut.WheelOut.RR.Trq_B2W.Link = FMUVar
+IFOut.WheelOut.RR.Trq_B2W.Rel = Trq_B2W_RR
+IFOut.WheelOut.RR.Trq_Drive.Link = FMUVar
+IFOut.WheelOut.RR.Trq_Drive.Rel = Trq_Drive_RR
+IFOut.WheelOut.RR.Trq_Supp2WC.Link = FMUVar
+IFOut.WheelOut.RR.Trq_Supp2WC.Rel = Trq_Supp2WC_RR
+IFOut.WheelOut.RR.rot.Link = FMUVar
+IFOut.WheelOut.RR.rot.Rel = rot_RR
+IFOut.WheelOut.RR.rotv.Link = FMUVar
+IFOut.WheelOut.RR.rotv.Rel = rotv_RR
+IFOut.iDiff_mean.Link =
+IFOut.iDiff_mean.Rel =
+
+DDict.Links:
+
+
+# Specifies the driveline mean differential ratio.
+# Default is 3.0
+PowerTrain.DL.iDiff_mean = 4.0
+# Specifies the number of possible drive sources
+# to the driveline.
+# Default is 1
+PowerTrain.DL.nDriveSource = 1
+# Specifies on which position the drive source ds
+# is applied.
+# Following kinds are supported: NoPosition,Center, Front, Rear, FL, FR, RL, RR
+PowerTrain.DL.DriveSourcePos = Front

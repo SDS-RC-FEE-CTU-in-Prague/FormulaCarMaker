@@ -1,0 +1,47 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyPTControlOSM_FMU
+FMU.Modelclass = PTControlOSM
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c90932}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Brake.Link = IFVar
+FMUIn.Brake.Rel = Brake
+FMUIn.Clutch.Link = IFVar
+FMUIn.Clutch.Rel = Clutch
+FMUIn.FuncReturn.Link = IFVar
+FMUIn.FuncReturn.Rel = FuncReturn
+FMUIn.Func_used_Absent.Link = IFVar
+FMUIn.Func_used_Absent.Rel = CfgIF.Func_used.OSMFunc_Absent
+FMUIn.Func_used_Drive.Link = IFVar
+FMUIn.Func_used_Drive.Rel = CfgIF.Func_used.OSMFunc_Drive
+FMUIn.Func_used_PowerAcc.Link = IFVar
+FMUIn.Func_used_PowerAcc.Rel = CfgIF.Func_used.OSMFunc_PowerAcc
+FMUIn.Func_used_PowerOff.Link = IFVar
+FMUIn.Func_used_PowerOff.Rel = CfgIF.Func_used.OSMFunc_PowerOff
+FMUIn.Func_used_PowerOn.Link = IFVar
+FMUIn.Func_used_PowerOn.Rel = CfgIF.Func_used.OSMFunc_PowerOn
+FMUIn.Func_used_SkipStart.Link = IFVar
+FMUIn.Func_used_SkipStart.Rel = CfgIF.Func_used.OSMFunc_SkipStart
+FMUIn.Func_used_Start.Link = IFVar
+FMUIn.Func_used_Start.Rel = CfgIF.Func_used.OSMFunc_Start
+FMUIn.GBKind.Link = IFVar
+FMUIn.GBKind.Rel = CfgIF.GBKind
+FMUIn.GearNoTrg.Link = IFVar
+FMUIn.GearNoTrg.Rel = GearNoTrg
+FMUIn.Key.Link = IFVar
+FMUIn.Key.Rel = Key
+FMUIn.SelectorCtrl.Link = IFVar
+FMUIn.SelectorCtrl.Rel = SelectorCtrl
+
+IFVar.OSMFunc.Link = FMUVar
+IFVar.OSMFunc.Rel = OSMFunc
+IFVar.OperationState.Link = FMUVar
+IFVar.OperationState.Rel = OperationState

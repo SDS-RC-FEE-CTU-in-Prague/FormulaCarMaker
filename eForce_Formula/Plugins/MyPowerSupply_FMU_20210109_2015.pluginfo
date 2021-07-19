@@ -1,0 +1,59 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 6.0pre 2017-02-07 14:54 TEMPLATE
+
+FMU.Name = MyPowerSupply_FMU
+FMU.Modelclass = PTPowerSupply
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f803}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 1
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Pwr_LV.Link = IFVar
+FMUIn.Pwr_LV.Rel = Pwr_LV
+
+IFOut.BattHV.AOC.Link =
+IFOut.BattHV.AOC.Rel =
+IFOut.BattHV.Current.Link =
+IFOut.BattHV.Current.Rel =
+IFOut.BattHV.Energy.Link =
+IFOut.BattHV.Energy.Rel =
+IFOut.BattHV.Pwr_max.Link =
+IFOut.BattHV.Pwr_max.Rel =
+IFOut.BattHV.Temp.Link =
+IFOut.BattHV.Temp.Rel =
+IFOut.BattLV.AOC.Link = FMUVar
+IFOut.BattLV.AOC.Rel = BattLV_AOC
+IFOut.BattLV.Current.Link = FMUVar
+IFOut.BattLV.Current.Rel = BattLV_Current
+IFOut.BattLV.Energy.Link = FMUVar
+IFOut.BattLV.Energy.Rel = BattLV_Energy
+IFOut.BattLV.Pwr_max.Link = FMUVar
+IFOut.BattLV.Pwr_max.Rel = BattLV_Pwr_max
+IFOut.BattLV.Temp.Link =
+IFOut.BattLV.Temp.Rel =
+IFOut.Eta_HV1toHV2.Link =
+IFOut.Eta_HV1toHV2.Rel =
+IFOut.Eta_HV1toLV.Link =
+IFOut.Eta_HV1toLV.Rel =
+IFOut.Pwr_HV1toHV2.Link =
+IFOut.Pwr_HV1toHV2.Rel =
+IFOut.Pwr_HV1toHV2_max.Link =
+IFOut.Pwr_HV1toHV2_max.Rel =
+IFOut.Pwr_HV1toLV.Link =
+IFOut.Pwr_HV1toLV.Rel =
+IFOut.Pwr_HV1toLV_max.Link =
+IFOut.Pwr_HV1toLV_max.Rel =
+IFOut.Voltage_HV1.Link =
+IFOut.Voltage_HV1.Rel =
+IFOut.Voltage_HV2.Link =
+IFOut.Voltage_HV2.Rel =
+IFOut.Voltage_LV.Link = FMUVar
+IFOut.Voltage_LV.Rel = Voltage_LV
+
+DDict.Links:
+
+

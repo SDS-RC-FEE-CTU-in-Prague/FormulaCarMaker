@@ -1,0 +1,69 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 5.0.3pre 2015-10-02 08:01 TEMPLATE
+
+FMU.Name = MyTireCPMod_FMU
+FMU.Modelclass = TireCPMod
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c91607}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 1
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.CP_0_z_In.Link = IFVar
+FMUIn.CP_0_z_In.Rel = CP_0.z
+FMUIn.Time.Link = DDictVar
+FMUIn.Time.Rel = Time
+FMUIn.TireNo.Link = IFVar
+FMUIn.TireNo.Rel = CfgIF.TireNo
+
+IFOut.CP_0.x.Link =
+IFOut.CP_0.x.Rel =
+IFOut.CP_0.y.Link =
+IFOut.CP_0.y.Rel =
+IFOut.CP_0.z.Link = FMUVar
+IFOut.CP_0.z.Rel = CP_0_z
+IFOut.CP_Vel_0.x.Link =
+IFOut.CP_Vel_0.x.Rel =
+IFOut.CP_Vel_0.y.Link =
+IFOut.CP_Vel_0.y.Rel =
+IFOut.CP_Vel_0.z.Link =
+IFOut.CP_Vel_0.z.Rel =
+IFOut.Fric.Link =
+IFOut.Fric.Rel =
+IFOut.Nev_0.x.Link =
+IFOut.Nev_0.x.Rel =
+IFOut.Nev_0.y.Link =
+IFOut.Nev_0.y.Rel =
+IFOut.Nev_0.z.Link =
+IFOut.Nev_0.z.Rel =
+IFOut.onRoad.Link =
+IFOut.onRoad.Rel =
+IFOut.Alpha.Link =
+IFOut.Alpha.Rel =
+IFOut.Frc_W.x.Link =
+IFOut.Frc_W.x.Rel =
+IFOut.Frc_W.y.Link =
+IFOut.Frc_W.y.Rel =
+IFOut.Frc_W.z.Link =
+IFOut.Frc_W.z.Rel =
+IFOut.Slp.Link =
+IFOut.Slp.Rel =
+IFOut.Trq_W.rx.Link =
+IFOut.Trq_W.rx.Rel =
+IFOut.Trq_W.ry.Link =
+IFOut.Trq_W.ry.Rel =
+IFOut.Trq_W.rz.Link =
+IFOut.Trq_W.rz.Rel =
+IFOut.TurnSlp.Link =
+IFOut.TurnSlp.Rel =
+IFOut.rBelt_eff.Link =
+IFOut.rBelt_eff.Rel =
+IFOut.vBelt.Link =
+IFOut.vBelt.Rel =
+
+DDict.Links:
+
+

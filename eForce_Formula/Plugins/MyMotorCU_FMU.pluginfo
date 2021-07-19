@@ -1,0 +1,31 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyMotorCU_FMU
+FMU.Modelclass = PTMotorCU
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f943}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Ignition.Link = IFVar
+FMUIn.Ignition.Rel = Ignition
+FMUIn.LoadIn.Link = IFVar
+FMUIn.LoadIn.Rel = ISGOut.Load
+FMUIn.Trq_trg.Link = IFVar
+FMUIn.Trq_trg.Rel = ISGIn.Trq_trg
+FMUIn.rotv.Link = IFVar
+FMUIn.rotv.Rel = ISGIn.rotv
+FMUIn.rotv_Gen_max.Link = IFVar
+FMUIn.rotv_Gen_max.Rel = CfgIF.ISG.rotv_Gen_max
+FMUIn.rotv_Mot_max.Link = IFVar
+FMUIn.rotv_Mot_max.Rel = CfgIF.ISG.rotv_Mot_max
+FMUIn.rotv_trg.Link = IFVar
+FMUIn.rotv_trg.Rel = ISGIn.rotv_trg
+
+IFVar.ISGOut.Load.Link = FMUVar
+IFVar.ISGOut.Load.Rel = LoadOut

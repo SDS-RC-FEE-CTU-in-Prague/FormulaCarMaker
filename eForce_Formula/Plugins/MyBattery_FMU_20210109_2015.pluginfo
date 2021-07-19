@@ -1,0 +1,48 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 6.0pre 2017-02-22 14:12 TEMPLATE
+
+FMU.Name = MyBattery_FMU
+FMU.Modelclass = PTBattery
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f012}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Current.Link = IFVar
+FMUIn.Current.Rel = Current
+
+IFOut.AOC.Link = FMUVar
+IFOut.AOC.Rel = AOC
+IFOut.Energy.Link = FMUVar
+IFOut.Energy.Rel = Energy
+IFOut.Pwr_max.Link = FMUVar
+IFOut.Pwr_max.Rel = Pwr_max
+IFOut.Temp.Link =
+IFOut.Temp.Rel =
+IFOut.Voltage.Link = FMUVar
+IFOut.Voltage.Rel = Voltage
+
+DDict.Links:
+
+
+# Total capacity of the voltage battery.
+# Default is 10Ah
+PowerTrain.PowerSupply.Batt.Capacity = 6.0
+# Battery open circuit (idle) voltage.
+# Default is 12V
+PowerTrain.PowerSupply.Batt.Voltage_oc = 12.0
+# Battery initial state of charge.
+# Default is 70%
+PowerTrain.PowerSupply.Batt.SOC = 70.0
+# Battery minimum admitted state of charge.
+# Battery should no be discharged below this value.
+# Default is 10%
+PowerTrain.PowerSupply.Batt.SOC_min = 10.0
+# Battery maximum admitted state of charge.
+# Battery should no be charged above this value.
+# Default is 90%
+PowerTrain.PowerSupply.Batt.SOC_max = 90.0

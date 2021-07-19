@@ -1,0 +1,54 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyGearBox_FMU
+FMU.Modelclass = PTGearBox
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c90812}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.GearNoTrg.Link = IFVar
+FMUIn.GearNoTrg.Rel = GearNoTrg
+FMUIn.Inert_in.Link = IFVar
+FMUIn.Inert_in.Rel = Inert_in
+FMUIn.rotv_out.Link = IFVar
+FMUIn.rotv_out.Rel = rotv_out
+FMUIn.Trq_in.Link = IFVar
+FMUIn.Trq_in.Rel = Trq_in
+
+IFVar.GearNo.Link = FMUVar
+IFVar.GearNo.Rel = GearNo
+IFVar.Inert_out.Link = FMUVar
+IFVar.Inert_out.Rel = Inert_out
+IFVar.Trq_SuppInert.Link = FMUVar
+IFVar.Trq_SuppInert.Rel = Trq_SuppInert
+IFVar.Trq_out.Link = FMUVar
+IFVar.Trq_out.Rel = Trq_out
+IFVar.i.Link = FMUVar
+IFVar.i.Rel = i
+IFVar.i_TrqIn2Out.Link = FMUVar
+IFVar.i_TrqIn2Out.Rel = i_TrqIn2Out
+IFVar.rot_in.Link = FMUVar
+IFVar.rot_in.Rel = rot_in
+IFVar.rotv_in.Link = FMUVar
+IFVar.rotv_in.Rel = rotv_in
+
+# Specifies the gearbox kind.
+# Following kinds are supported: NoGearBox,
+# Manual, AutoWithManual, AutoNoManual.
+PowerTrain.GearBox.GBKind = Manual
+# Specifies the clutch kind.
+# Following kinds are supported: Closed,
+# Open, Friction, Converter.
+PowerTrain.GearBox.ClKind = Friction
+# Transmission ratio for every single forward gear.
+PowerTrain.GearBox.iForwardGears = 3.4 1.9 1.35 1.05 0.8
+# Transmission ratio for every single backward gear.
+PowerTrain.GearBox.iBackwardGears = -4.0
+# Specifies the gearbox body mass.
+PowerTrain.GearBox.Bdy.mass = 0.0

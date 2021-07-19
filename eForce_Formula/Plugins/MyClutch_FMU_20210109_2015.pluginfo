@@ -1,0 +1,46 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 6.0pre 2017-02-22 14:09 TEMPLATE
+
+FMU.Name = MyClutch_FMU
+FMU.Modelclass = PTClutch
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f018}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Inert_in.Link = IFVar
+FMUIn.Inert_in.Rel = Inert_in
+FMUIn.Pos.Link = IFVar
+FMUIn.Pos.Rel = Pos
+FMUIn.rotv_out.Link = IFVar
+FMUIn.rotv_out.Rel = rotv_out
+FMUIn.Trq_in.Link = IFVar
+FMUIn.Trq_in.Rel = Trq_in
+
+IFOut.Inert_out.Link = FMUVar
+IFOut.Inert_out.Rel = Inert_out
+IFOut.Trq_SuppInert.Link = FMUVar
+IFOut.Trq_SuppInert.Rel = Trq_SuppInert
+IFOut.Trq_out.Link = FMUVar
+IFOut.Trq_out.Rel = Trq_out
+IFOut.i_TrqIn2Out.Link = FMUVar
+IFOut.i_TrqIn2Out.Rel = i_TrqIn2Out
+IFOut.rot_in.Link = FMUVar
+IFOut.rot_in.Rel = rot_in
+IFOut.rotv_in.Link = FMUVar
+IFOut.rotv_in.Rel = rotv_in
+
+DDict.Links:
+	UserOut_00
+
+DDict.UserOut_00.Link = FMUVar
+DDict.UserOut_00.Rel = Trq_max
+
+# Specifies the clutch kind of the user model.
+# Possible values are: Closed, Open,
+# Friction, Converter
+PowerTrain.Clutch.ClKind = Friction

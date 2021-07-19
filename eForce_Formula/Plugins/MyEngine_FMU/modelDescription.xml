@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<fmiModelDescription
+  fmiVersion="1.0"
+  modelName="MyEngine_FMU"
+  modelIdentifier="MyEngine_FMU"
+  guid="{deadbeef-3df3-4a00-8276-176fa3c91106}"
+  numberOfContinuousStates="0"
+  numberOfEventIndicators="0">
+
+<ModelVariables>
+ <ScalarVariable name="Ignition" valueReference="0" causality = "input">
+     <Real/>
+ </ScalarVariable>
+ <ScalarVariable name="FuelLevel" valueReference="1" causality = "input">
+     <Real/>
+ </ScalarVariable>
+ <ScalarVariable name="rotv" valueReference="2" causality = "input">
+     <Real/>
+ </ScalarVariable>
+ <ScalarVariable name="Load" valueReference="3" causality = "input">
+     <Real/>
+ </ScalarVariable>
+
+ <ScalarVariable name="Inert" valueReference="4" causality = "output">
+     <Real start="0" fixed="true"/>
+ </ScalarVariable>
+ <ScalarVariable name="Trq" valueReference="5" causality = "output">
+     <Real start="0" fixed="true"/>
+ </ScalarVariable>
+
+ <ScalarVariable name="TrqKl15Off" valueReference="6" causality = "internal" variability="parameter">
+     <Real start="-80" fixed="true"/>
+ </ScalarVariable>
+ <ScalarVariable name="I_out" valueReference="7" causality = "internal" variability="parameter">
+     <Real start="0.1" fixed="true"/>
+ </ScalarVariable>
+</ModelVariables>
+
+<Implementation>
+  <CoSimulation_StandAlone>
+    <Capabilities
+      canHandleVariableCommunicationStepSize="true"
+      canHandleEvents="true"/>
+  </CoSimulation_StandAlone>
+</Implementation>
+
+</fmiModelDescription>

@@ -1,0 +1,81 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 5.0.3pre 2015-10-12 14:39 TEMPLATE
+
+FMU.Name = MyVhclOperator_FMU
+FMU.Modelclass = VhclOperator
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c91150}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.BrakePark_In.Link = IFVar
+FMUIn.BrakePark_In.Rel = BrakePark
+FMUIn.Brake_In.Link = IFVar
+FMUIn.Brake_In.Rel = Brake
+FMUIn.Clutch_In.Link = IFVar
+FMUIn.Clutch_In.Rel = Clutch
+FMUIn.Gas_In.Link = IFVar
+FMUIn.Gas_In.Rel = Gas
+FMUIn.GearBoxKind.Link = IFVar
+FMUIn.GearBoxKind.Rel = CfgIF.GearBoxKind
+FMUIn.GearNo_In.Link = IFVar
+FMUIn.GearNo_In.Rel = GearNo
+FMUIn.Key_In.Link = IFVar
+FMUIn.Key_In.Rel = Key
+FMUIn.OperationState.Link = IFVar
+FMUIn.OperationState.Rel = OperationState
+FMUIn.OperationState_trg.Link = IFVar
+FMUIn.OperationState_trg.Rel = OperationState_trg
+FMUIn.SelectorCtrl_In.Link = IFVar
+FMUIn.SelectorCtrl_In.Rel = SelectorCtrl
+FMUIn.SteeringAng_In.Link = IFVar
+FMUIn.SteeringAng_In.Rel = Steering.Ang
+FMUIn.Velocity.Link = IFVar
+FMUIn.Velocity.Rel = Velocity
+
+IFOut.Brake.Link = FMUVar
+IFOut.Brake.Rel = Brake
+IFOut.BrakeLever.Link =
+IFOut.BrakeLever.Rel =
+IFOut.BrakePark.Link = FMUVar
+IFOut.BrakePark.Rel = BrakePark
+IFOut.Clutch.Link = FMUVar
+IFOut.Clutch.Rel = Clutch
+IFOut.Gas.Link = FMUVar
+IFOut.Gas.Rel = Gas
+IFOut.GearNo.Link = FMUVar
+IFOut.GearNo.Rel = GearNo
+IFOut.Key.Link = FMUVar
+IFOut.Key.Rel = Key
+IFOut.OperatorFinished.Link = FMUVar
+IFOut.OperatorFinished.Rel = OperationFinished
+IFOut.SST.Link =
+IFOut.SST.Rel =
+IFOut.SelectorCtrl.Link = FMUVar
+IFOut.SelectorCtrl.Rel = SelectorCtrl
+IFOut.Steering.Ang.Link = FMUVar
+IFOut.Steering.Ang.Rel = SteeringAng
+IFOut.Steering.AngAcc.Link =
+IFOut.Steering.AngAcc.Rel =
+IFOut.Steering.AngVel.Link =
+IFOut.Steering.AngVel.Rel =
+IFOut.Steering.Trq.Link =
+IFOut.Steering.Trq.Rel =
+IFOut.UserSignal.s0.Link =
+IFOut.UserSignal.s0.Rel =
+IFOut.UserSignal.s1.Link =
+IFOut.UserSignal.s1.Rel =
+IFOut.UserSignal.s2.Link =
+IFOut.UserSignal.s2.Rel =
+IFOut.UserSignal.s3.Link =
+IFOut.UserSignal.s3.Rel =
+IFOut.UserSignal.s4.Link =
+IFOut.UserSignal.s4.Rel =
+
+DDict.Links:
+
+

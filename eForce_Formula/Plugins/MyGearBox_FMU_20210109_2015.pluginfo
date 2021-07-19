@@ -1,0 +1,85 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 6.0pre 2017-02-22 14:17 TEMPLATE
+
+FMU.Name = MyGearBox_FMU
+FMU.Modelclass = PTGearBox
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c90812}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.GearNoTrg.Link = IFVar
+FMUIn.GearNoTrg.Rel = GearNoTrg
+FMUIn.Inert_in.Link = IFVar
+FMUIn.Inert_in.Rel = Inert_in
+FMUIn.rotv_out.Link = IFVar
+FMUIn.rotv_out.Rel = rotv_out
+FMUIn.Trq_in.Link = IFVar
+FMUIn.Trq_in.Rel = Trq_in
+
+IFOut.ClutchOut.Trq_in.Link =
+IFOut.ClutchOut.Trq_in.Rel =
+IFOut.ClutchOut.Trq_out.Link =
+IFOut.ClutchOut.Trq_out.Rel =
+IFOut.ClutchOut.i_TrqIn2Out.Link =
+IFOut.ClutchOut.i_TrqIn2Out.Rel =
+IFOut.ClutchOut.rot_in.Link =
+IFOut.ClutchOut.rot_in.Rel =
+IFOut.ClutchOut.rot_out.Link =
+IFOut.ClutchOut.rot_out.Rel =
+IFOut.ClutchOut.rotv_in.Link =
+IFOut.ClutchOut.rotv_in.Rel =
+IFOut.ClutchOut.rotv_out.Link =
+IFOut.ClutchOut.rotv_out.Rel =
+IFOut.Clutch_dis_Out.Trq_in.Link =
+IFOut.Clutch_dis_Out.Trq_in.Rel =
+IFOut.Clutch_dis_Out.Trq_out.Link =
+IFOut.Clutch_dis_Out.Trq_out.Rel =
+IFOut.Clutch_dis_Out.i_TrqIn2Out.Link =
+IFOut.Clutch_dis_Out.i_TrqIn2Out.Rel =
+IFOut.Clutch_dis_Out.rot_in.Link =
+IFOut.Clutch_dis_Out.rot_in.Rel =
+IFOut.Clutch_dis_Out.rot_out.Link =
+IFOut.Clutch_dis_Out.rot_out.Rel =
+IFOut.Clutch_dis_Out.rotv_in.Link =
+IFOut.Clutch_dis_Out.rotv_in.Rel =
+IFOut.Clutch_dis_Out.rotv_out.Link =
+IFOut.Clutch_dis_Out.rotv_out.Rel =
+IFOut.GearNo.Link = FMUVar
+IFOut.GearNo.Rel = GearNo
+IFOut.GearNo_dis.Link =
+IFOut.GearNo_dis.Rel =
+IFOut.Inert_out.Link = FMUVar
+IFOut.Inert_out.Rel = Inert_out
+IFOut.Trq_SuppInert.Link = FMUVar
+IFOut.Trq_SuppInert.Rel = Trq_SuppInert
+IFOut.Trq_out.Link = FMUVar
+IFOut.Trq_out.Rel = Trq_out
+IFOut.i.Link = FMUVar
+IFOut.i.Rel = i
+IFOut.i_TrqIn2Out.Link = FMUVar
+IFOut.i_TrqIn2Out.Rel = i_TrqIn2Out
+IFOut.rot_in.Link = FMUVar
+IFOut.rot_in.Rel = rot_in
+IFOut.rotv_in.Link = FMUVar
+IFOut.rotv_in.Rel = rotv_in
+
+DDict.Links:
+
+
+# Specifies the gearbox kind.
+# Following kinds are supported: NoGearBox,
+# Manual, AutoWithManual, AutoNoManual.
+PowerTrain.GearBox.GBKind = Manual
+# Specifies the clutch kind.
+# Following kinds are supported: Closed,
+# Open, Friction, Converter.
+PowerTrain.GearBox.ClKind = Friction
+# Transmission ratio for every single forward gear.
+PowerTrain.GearBox.iForwardGears = 3.4 1.9 1.35 1.05 0.8
+# Transmission ratio for every single backward gear.
+PowerTrain.GearBox.iBackwardGears = -4.0

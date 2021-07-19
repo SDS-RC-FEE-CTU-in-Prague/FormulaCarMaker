@@ -1,0 +1,218 @@
+papersize DINA4
+paperorientation landscape
+
+frame DEFAULT {
+    autoclear 
+    textcolor black
+    thickness 0.03
+    edgecolor none
+    style "--"
+    fontsize 0.4
+    font "Helvetica"
+    noshadow 
+    interiorcolor white
+}
+
+line DEFAULT {
+    thickness 0.3
+    style solid
+    color black
+}
+
+grid mygrid {
+    thickness 0.01
+    style ".."
+    kind lined
+    color black
+}
+
+axis DEFAULT {
+    gridevery same
+    snapmajorticks 
+    style "--"
+    labelformat automatic
+    notemphasized 
+    tickdirection same
+    notarrowed 
+    grid mygrid
+    majortickevery 5
+    font "Helvetica"
+    scaling linear
+    minorticklength 0.15
+    fontsize 0.6
+    notconnected 
+    textcolor black
+    thickness 0.03
+    noreverseaxis 
+    majorticklength 0.25
+    color black
+}
+
+plot2d DEFAULT {
+    thickness 0.01
+    edgecolor automatic
+    style solid
+    kind lined
+    symbol automatic
+    interiorcolor automatic
+    color automatic
+}
+
+plot3d DEFAULT {
+    thickness .01
+    edgecolor automatic
+    style automatic
+    kind lined
+    symbol automatic
+    interiorcolor automatic
+    color automatic
+}
+
+frame mainframe {
+    at 0.0, 0.0
+    size 29.7, 21.0
+}
+
+frame legendroot {
+    edgecolor none
+    at 4.0, 0.25
+    adjustto mainframe
+    interiorcolor none
+    size 0.5, 0.5
+}
+
+frame legend1 {
+    edgecolor none
+    at 0.0, 0.0
+    fontsize 0.60
+    adjustto legendroot
+    alignment top left
+    interiorcolor none
+    size 10.45, 2
+}
+
+frame legend2 {
+    edgecolor none
+    at 10.849999999999998, 0.0
+    fontsize 0.60
+    adjustto legendroot
+    alignment top left
+    interiorcolor none
+    size 10.45, 2
+}
+
+frame legend3 {
+    edgecolor none
+    at 21.699999999999996, 0.0
+    fontsize 0.60
+    adjustto legendroot
+    alignment top left
+    interiorcolor none
+    size 10.45, 2
+}
+
+axis xaxis1 {
+    snapmajorticks 
+    gridevery same
+    at 4.0, 4.25
+    nogrid 
+    majortickevery 5
+    ticklabel below
+    size 24.7, 0
+    in mainframe
+}
+
+axis yaxisorig {
+    snapmajorticks 
+    gridevery same
+    connectto xaxis1 0.0
+    at 4.0, 4.25
+    ticklabel left
+    size 0, 16.5
+    in mainframe
+}
+
+axis yaxis1 {
+    textcolor black
+    snapmajorticks 
+    gridevery same
+    at 4.0, 4.25
+    nogrid 
+    color black
+    ticklabel left
+    size 0, 16.5
+    in mainframe
+}
+
+frame xlabel1 {
+    textcolor black
+    edgecolor none
+    at 0.0, -1.75
+    fontsize 0.60
+    adjustto xaxis1
+    alignment center right
+    interiorcolor none
+    size 24.7, 1.0
+}
+
+frame ylabel1 {
+    textcolor black
+    edgecolor none
+    path up
+    at -3.5, 0.0
+    fontsize 0.60
+    adjustto yaxis1
+    alignment top center
+    interiorcolor none
+    size 1, 16.5
+}
+
+axis xaxisorig {
+    snapmajorticks 
+    gridevery same
+    connectto yaxis1 0.0
+    at 4.0, 4.25
+    ticklabel below
+    size 24.7, 0
+    in mainframe
+}
+
+file  Data0 {
+    "SimOutput/ML-ntbk/20171219/.tmp_0001/Examples_BasicFunctions_Driver_Overtaking_004157_20171219_004304.erg" binary byteorder LittleEndian
+    record {
+        longinteger
+        longinteger
+        longinteger
+        longinteger
+    }
+    array of record {
+    "Car.Distance"                 : Double    	# m
+    "Time"                         : Double    	# s
+    "Brake.Hyd.Sys.pMC"            : Float     	# bar
+    "Car.Yaw"                      : Float     	# rad
+    "Car.ax"                       : Float     	# m/s^2
+    "Car.v"                        : Float     	# m/s
+    "DM.Steer.Ang"                 : Float     	# rad
+    "_Dummy0_"                     : character 	# -
+    "_Dummy1_"                     : character 	# -
+    "_Dummy2_"                     : character 	# -
+    "_Dummy3_"                     : character 	# -
+  }
+}
+
+# Plots
+
+plot2d plot0 {
+    Data0."Time" xaxis1
+    Data0."Car.ax" yaxis1
+    color blue
+    edgecolor blue
+    interiorcolor blue
+}
+
+print legend1 {plot0 "Carefull \n"  }
+print ylabel1 {"Acceleration x [m/s^2]"}
+
+print xlabel1 {"Car.Distance [s]"}
+
+showpage

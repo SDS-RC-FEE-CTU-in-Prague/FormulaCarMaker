@@ -1,0 +1,55 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyTire_FMU
+FMU.Modelclass = Tire
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c91339}
+
+FMU.Inputs.ShowInDDict = 1
+FMU.Outputs.ShowInDDict = 1
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Frc_W_x_In.Link = IFVar
+FMUIn.Frc_W_x_In.Rel = Frc_W.x
+FMUIn.Frc_W_y_In.Link = IFVar
+FMUIn.Frc_W_y_In.Rel = Frc_W.y
+FMUIn.Frc_W_z_In.Link = IFVar
+FMUIn.Frc_W_z_In.Rel = Frc_W.z
+FMUIn.P_v0_W_x.Link = IFVar
+FMUIn.P_v0_W_x.Rel = P_v0_W.x
+FMUIn.P_v0_W_y.Link = IFVar
+FMUIn.P_v0_W_y.Rel = P_v0_W.y
+FMUIn.Rim_rotv.Link = IFVar
+FMUIn.Rim_rotv.Rel = Rim_rotv
+FMUIn.Trq_w_x_In.Link = IFVar
+FMUIn.Trq_w_x_In.Rel = Trq_W.rx
+FMUIn.Trq_w_y_In.Link = IFVar
+FMUIn.Trq_w_y_In.Rel = Trq_W.ry
+FMUIn.Trq_w_z_In.Link = IFVar
+FMUIn.Trq_w_z_In.Rel = Trq_W.rz
+FMUIn.muRoad.Link = IFVar
+FMUIn.muRoad.Rel = muRoad
+
+IFVar.Alpha.Link = FMUVar
+IFVar.Alpha.Rel = Alpha
+IFVar.Frc_W.x.Link = FMUVar
+IFVar.Frc_W.x.Rel = Frc_W_x
+IFVar.Frc_W.y.Link = FMUVar
+IFVar.Frc_W.y.Rel = Frc_W_y
+IFVar.Frc_W.z.Link = FMUVar
+IFVar.Frc_W.z.Rel = Frc_W_z
+IFVar.Slp.Link = FMUVar
+IFVar.Slp.Rel = Slp
+IFVar.Trq_W.rx.Link = FMUVar
+IFVar.Trq_W.rx.Rel = Trq_w_x
+IFVar.Trq_W.ry.Link = FMUVar
+IFVar.Trq_W.ry.Rel = Trq_w_y
+IFVar.Trq_W.rz.Link = FMUVar
+IFVar.Trq_W.rz.Rel = Trq_w_z
+IFVar.rBelt_eff.Link = FMUVar
+IFVar.rBelt_eff.Rel = rBelt_eff
+IFVar.vBelt.Link = FMUVar
+IFVar.vBelt.Rel = vBelt

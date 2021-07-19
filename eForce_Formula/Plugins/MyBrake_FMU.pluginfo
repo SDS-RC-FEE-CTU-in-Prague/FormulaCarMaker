@@ -1,0 +1,26 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyBrake_FMU
+FMU.Modelclass = Brake
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3caf008}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.Tunables.ShowInDDict = 1
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Pedal.Link = IFVar
+FMUIn.Pedal.Rel = Pedal
+
+IFVar.Trq_WB.FL.Link = FMUVar
+IFVar.Trq_WB.FL.Rel = Trq_WB_FL
+IFVar.Trq_WB.FR.Link = FMUVar
+IFVar.Trq_WB.FR.Rel = Trq_WB_FR
+IFVar.Trq_WB.RL.Link = FMUVar
+IFVar.Trq_WB.RL.Rel = Trq_WB_RL
+IFVar.Trq_WB.RR.Link = FMUVar
+IFVar.Trq_WB.RR.Rel = Trq_WB_RR

@@ -1,0 +1,37 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyTransmCU_FMU
+FMU.Modelclass = PTTransmCU
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c90803}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.GearBox.Clutch.rotv_out.Link = IFVar
+FMUIn.GearBox.Clutch.rotv_out.Rel = GearBoxIn.Clutch.rotv_out
+FMUIn.GearNo.Link = IFVar
+FMUIn.GearNo.Rel = GearBoxIn.GearNo
+FMUIn.GearNoTrg.Link = IFVar
+FMUIn.GearNoTrg.Rel = GearBoxOut.GearNoTrg
+FMUIn.Ignition.Link = IFVar
+FMUIn.Ignition.Rel = Ignition
+FMUIn.nBGears.Link = IFVar
+FMUIn.nBGears.Rel = CfgIF.GearBox.nBGears
+FMUIn.nFGears.Link = IFVar
+FMUIn.nFGears.Rel = CfgIF.GearBox.nFGears
+FMUIn.SelectorCtrl.Link = IFVar
+FMUIn.SelectorCtrl.Rel = SelectorCtrl
+
+IFVar.GearBoxM_Out.GB_m1.i_trg.Link = DDictVar
+IFVar.GearBoxM_Out.GB_m1.i_trg.Rel = UserOut_04
+IFVar.GearBoxOut.Clutch.Pos.Link = FMUVar
+IFVar.GearBoxOut.Clutch.Pos.Rel = ClutchPos
+IFVar.GearBoxOut.GearNoTrg.Link = FMUVar
+IFVar.GearBoxOut.GearNoTrg.Rel = GearNoTrgOut
+IFVar.GearBoxOut.set_ParkBrake.Link = FMUVar
+IFVar.GearBoxOut.set_ParkBrake.Rel = set_ParkBrake

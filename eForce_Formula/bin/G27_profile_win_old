@@ -1,0 +1,45 @@
+#INFOFILE1.1 - Do not remove this line!
+
+DMId.AppHost       = localhost
+DMId.AppClass      = *
+DMId.AppUser       = *
+DMId.SleepDelta_ms = 20
+
+DMId.mode           = 23
+DMId.buttonmode     = 0
+DMId.minSteerAngle  = -450
+DMId.maxSteerAngle  = 450
+DMId.i_Trq2Haptic   = 11416
+DMId.movAverage_N   = 10
+DMId.addScaleFactor = 0.4
+DMId.damping_coeff  = 0.15
+
+Ax.steering = 0
+Ax.gas      = 2
+Ax.brake    = 3
+Ax.clutch   = 4
+Ax.reserve  = 1
+
+Bt.shift_driver = 0
+Bt.shift_manual = 1
+Bt.shift_paddle = 2
+Bt.paddle_R     = 4
+Bt.paddle_L     = 5
+Bt.lat_driver   = 6
+Bt.longi_driver = 7
+Bt.gear_1       = 8
+Bt.gear_2       = 9
+Bt.gear_3       = 10
+Bt.gear_4       = 11
+Bt.gear_5       = 12
+Bt.gear_6       = 13
+Bt.gear_R       = 14
+Bt.frc_feedback = 21
+Bt.stop_DMI     = 22
+Bt.User_In01    = 3
+Bt.User_In02    = 15
+Bt.User_In03    = 16
+Bt.User_In04    = 17
+Bt.User_In05    = 18
+Bt.User_In06    = 19
+Bt.User_In07    = 20

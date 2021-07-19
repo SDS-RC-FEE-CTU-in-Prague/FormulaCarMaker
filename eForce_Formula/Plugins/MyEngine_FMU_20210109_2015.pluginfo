@@ -1,0 +1,46 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 6.0pre 2017-02-22 14:15 TEMPLATE
+
+FMU.Name = MyEngine_FMU
+FMU.Modelclass = PTEngine
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c91106}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.FuelLevel.Link = IFVar
+FMUIn.FuelLevel.Rel = FuelLevel
+FMUIn.Ignition.Link = IFVar
+FMUIn.Ignition.Rel = Ignition
+FMUIn.Load.Link = IFVar
+FMUIn.Load.Rel = Load
+FMUIn.rotv.Link = IFVar
+FMUIn.rotv.Rel = rotv
+
+IFOut.FuelFlow.Link =
+IFOut.FuelFlow.Rel =
+IFOut.Inert.Link = FMUVar
+IFOut.Inert.Rel = Inert
+IFOut.Trq.Link = FMUVar
+IFOut.Trq.Rel = Trq
+
+DDict.Links:
+
+
+# Specifies the engine idle speed.
+# Default is 800rpm
+PowerTrain.Engine.rotv_idle = 800.0
+# Specifies the engine off speed.
+# Default is 500rpm
+PowerTrain.Engine.rotv_off = 500.0
+# Specifies the engine maximum speed.
+# Default is 8000rpm
+PowerTrain.Engine.rotv_max = 8000.0
+# Specifies the engine speed with optimal
+# fuel consumption.
+# Default is 2300rpm
+PowerTrain.Engine.rotv_opt = 2300.0

@@ -1,0 +1,9 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-Plugins 1
+FileCreator = CarMaker 2021-01-09 20:21:39
+PTControl.CM4SL = 1
+PTControl.CM4SL.Info = CM4SL
+PTEngine.MyEngine_FMU = 1
+PTEngine.MyEngine_FMU.Info = MyEngine_FMU
+HydBrakeSystem.HydESP = 1
+HydBrakeSystem.HydESP.Info = HydESP

@@ -1,0 +1,85 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 5.0pre 2015-01-22 13:24 TEMPLATE
+
+FMU.Name = MyVehicleControl_FMU
+FMU.Modelclass = VehicleControl
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c90815}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.Gas_in.Link = IFVar
+FMUIn.Gas_in.Rel = Gas
+
+IFOut.Brake.Link =
+IFOut.Brake.Rel =
+IFOut.BrakeLever.Link =
+IFOut.BrakeLever.Rel =
+IFOut.BrakePark.Link =
+IFOut.BrakePark.Rel =
+IFOut.Clutch.Link =
+IFOut.Clutch.Rel =
+IFOut.Gas.Link = FMUVar
+IFOut.Gas.Rel = Gas_out
+IFOut.GearNo.Link =
+IFOut.GearNo.Rel =
+IFOut.Key.Link =
+IFOut.Key.Rel =
+IFOut.Lights.Brake.Link =
+IFOut.Lights.Brake.Rel =
+IFOut.Lights.Daytime.Link =
+IFOut.Lights.Daytime.Rel =
+IFOut.Lights.FogFrontL.Link =
+IFOut.Lights.FogFrontL.Rel =
+IFOut.Lights.FogFrontR.Link =
+IFOut.Lights.FogFrontR.Rel =
+IFOut.Lights.FogRear.Link =
+IFOut.Lights.FogRear.Rel =
+IFOut.Lights.HighBeam.Link =
+IFOut.Lights.HighBeam.Rel =
+IFOut.Lights.IndL.Link =
+IFOut.Lights.IndL.Rel =
+IFOut.Lights.IndR.Link =
+IFOut.Lights.IndR.Rel =
+IFOut.Lights.LowBeam.Link =
+IFOut.Lights.LowBeam.Rel =
+IFOut.Lights.ParkL.Link =
+IFOut.Lights.ParkL.Rel =
+IFOut.Lights.ParkR.Link =
+IFOut.Lights.ParkR.Rel =
+IFOut.Lights.Reverse.Link =
+IFOut.Lights.Reverse.Rel =
+IFOut.Rider.RollAng.Link =
+IFOut.Rider.RollAng.Rel =
+IFOut.Rider.RollAngVel.Link =
+IFOut.Rider.RollAngVel.Rel =
+IFOut.SST.Link =
+IFOut.SST.Rel =
+IFOut.SelectorCtrl.Link =
+IFOut.SelectorCtrl.Rel =
+IFOut.Steering.Ang.Link =
+IFOut.Steering.Ang.Rel =
+IFOut.Steering.AngAcc.Link =
+IFOut.Steering.AngAcc.Rel =
+IFOut.Steering.AngVel.Link =
+IFOut.Steering.AngVel.Rel =
+IFOut.Steering.Trq.Link =
+IFOut.Steering.Trq.Rel =
+IFOut.UserSignal_0.Link =
+IFOut.UserSignal_0.Rel =
+IFOut.UserSignal_1.Link =
+IFOut.UserSignal_1.Rel =
+IFOut.UserSignal_2.Link =
+IFOut.UserSignal_2.Rel =
+IFOut.UserSignal_3.Link =
+IFOut.UserSignal_3.Rel =
+IFOut.UserSignal_4.Link =
+IFOut.UserSignal_4.Rel =
+
+DDict.Links:
+
+

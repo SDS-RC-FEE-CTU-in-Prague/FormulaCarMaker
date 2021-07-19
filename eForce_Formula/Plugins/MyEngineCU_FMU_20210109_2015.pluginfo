@@ -1,0 +1,47 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 1
+FileCreator = CarMaker 5.0pre 2015-02-13 09:23 TEMPLATE
+
+FMU.Name = MyEngineCU_FMU
+FMU.Modelclass = PTEngineCU
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f831}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.FuelCutOffIn.Link = IFVar
+FMUIn.FuelCutOffIn.Rel = FuelCutOff
+FMUIn.Ignition.Link = IFVar
+FMUIn.Ignition.Rel = Ignition
+FMUIn.LoadIn.Link = IFVar
+FMUIn.LoadIn.Rel = Load
+FMUIn.rotv.Link = IFVar
+FMUIn.rotv.Rel = rotv
+FMUIn.rotv_idle.Link = IFVar
+FMUIn.rotv_idle.Rel = CfgIF.rotv_idle
+FMUIn.rotv_off.Link = IFVar
+FMUIn.rotv_off.Rel = CfgIF.rotv_off
+FMUIn.set_ISC.Link = IFVar
+FMUIn.set_ISC.Rel = set_ISC
+
+IFOut.Engine_on.Link = FMUVar
+IFOut.Engine_on.Rel = Engine_on
+IFOut.FuelCutOff.Link = FMUVar
+IFOut.FuelCutOff.Rel = FuelCutOffOut
+IFOut.Load.Link = FMUVar
+IFOut.Load.Rel = LoadOut
+IFOut.Status.Link =
+IFOut.Status.Rel =
+IFOut.TrqDrag.Link =
+IFOut.TrqDrag.Rel =
+IFOut.TrqFull.Link =
+IFOut.TrqFull.Rel =
+IFOut.TrqOpt.Link =
+IFOut.TrqOpt.Rel =
+
+DDict.Links:
+
+

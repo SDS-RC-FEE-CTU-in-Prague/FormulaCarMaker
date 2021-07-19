@@ -1,0 +1,27 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-PlugInfo 2
+FileCreator = CarMaker 9.0 2020-04-08 12:42 TEMPLATE
+
+FMU.Name = MyBatteryCU_FMU
+FMU.Modelclass = PTBatteryCU
+FMU.GUID = {deadbeef-3df3-4a00-8276-176fa3c9f022}
+
+FMU.Inputs.ShowInDDict = 0
+FMU.Outputs.ShowInDDict = 0
+FMU.MakePluginfo = 0
+FMU.DebugLogging = 0
+FMU.InitParamStartValues = 1
+
+FMUIn.BattLV.AOC.Link = IFVar
+FMUIn.BattLV.AOC.Rel = BattLV.AOC
+FMUIn.Ignition.Link = IFVar
+FMUIn.Ignition.Rel = Ignition
+FMUIn.Pwr_HV1toLV_trg_In.Link = IFVar
+FMUIn.Pwr_HV1toLV_trg_In.Rel = Pwr_HV1toLV_trg
+
+IFVar.Pwr_HV1toLV_trg.Link = FMUVar
+IFVar.Pwr_HV1toLV_trg.Rel = Pwr_HV1toLV_trg_Out
+IFVar.SOC_LV.Link = FMUVar
+IFVar.SOC_LV.Rel = SOC_LV
+IFVar.SOH_LV.Link = FMUVar
+IFVar.SOH_LV.Rel = SOH_LV
