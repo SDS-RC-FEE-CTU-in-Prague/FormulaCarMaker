@@ -1,0 +1,81 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-Tire-TameTire 1
+FileCreator = CarMaker for Simulink 2018-12-10 22:05:22
+Description:
+
+
+## General ###############################################################
+Side = left
+StandStill.cLong = 0.01
+StandStill.cSide = 0.2
+StandStill.vMax = 0.25
+
+
+## Visualization #########################################################
+FLoadMax = 10000.0
+NomWidth = 0.195
+RimRadius = 0.193
+
+
+## Tame-Tire #############################################################
+SolverMode = 2
+CalcOpt = 1
+CalcFrame = 1
+InfPress = 0.8
+
+Init.Time = 0.0
+Init.TempCore = 25
+Init.TempSurf = 30
+Init.TempTrack = 35
+
+Scale.LongSlipStiff = 0.2
+Scale.LatSlipStiff = 0.2
+Scale.TorsStiff = 0.6
+Scale.LongStiff = 1.1
+Scale.LatStiff = 1.4
+Scale.VertStiff = 1.0
+Scale.BeltCompl = 1.5
+Scale.TreadDepth = 0.4
+Scale.GlobalFric = 1.0
+
+NomRadius = 0.318
+
+Limit.IncAng = -0.158	0.158
+Limit.Deflec = 0.0	0.056
+Limit.TempSurf = 20.0	200.0
+Limit.TempCoreAvg = 20.0	80.0
+
+Radial.Stiffness = 350000.0
+Radial.Damping = 1000.0
+Radial.VertStiffness = 44835.0
+Radial.PresStiffness = 67592.0
+
+
+## Additional Parameters #################################################
+
+Data:
+	/uoypPizlpyakYyatJqGsZ6Smt/C37XKtMuzzs3PoKv1s5acmpGMmrSahrOWnd/C36uekpqrlo2aq7Og
+	rKu7383Pzs/19bKQm5qTvJCamZnF9fbN0c319s7GyvX2ycr19s7K9fbJ9fbP0czOx8jJ9fbP0c/Pzc7M
+	y8z19s7Ry83NxprSz8r19s/Ryc7GyMj19s/Ry8jJzMr19s/Rz8/OycnG9fbI0c3LzfX2z9HPzcrLyc31
+	9s7RzcvNyprSz8n19tLM0cnOz8qa0s7M9fbP0c/GyMjK9fbN0cvLz8j19s/Rz8/Nzc3LxvX2z9HIycbN
+	zPX2z9HPz87K9fbP0c/PyPX2z9HJ9fbO9fbLy8fMytHK9fbJyMrGztHJ9fbN0c7Mxsua0s/J9fbN0cbO
+	xsya0s/J9fbSzdHJz8jImtLPyPX2z9HPz8rOxsrM9fbJzsrPz8/19s/19tLMzMfJzdHH9fbKzszHx9HM
+	9fbP0c/Jycv19srIz83RzMr19s/Rz87Ly8vH9fbO0c7Pycf19sfRx83GyJrSz8n19s/Rz8/PzcfKzcj1
+	9s/RzsvLzcv19tLP0c/Py8/Nx8b19s/Rz8rGzMzH9fbSz9HMzsnKy/X2z9HNxsfMy/X2z9HPz8/HysnL
+	zvX20s/RzsjGycb19s/Rz87PzMnI9fbP0c/Mz8jIzPX2z9HPy8vHy8j19s7RzM3MzPX2zNHMxsfH9fbP
+	0cnPzcrJ9fbSysnLzs3Rx/X2y8rPysfRyPX2z9HPz8/MysfIyvX2z9HOz8bPyvX2z9HPzc7Lxsb19s7R
+	z8vJ9fbLzcfHyvX2zvX2zcrRz8719svRy8rKyvX20s7Jx9HGzcn19s/Ry8nHxsb19tLO0cnIz8v19sfR
+	xsbNyPX2zszRzcvGy/X20s3RzcnLyPX2ztHGz8nNmtLPyPX2z/X2zs/P9fbP0cz19svNx8fK9fbOx8vR
+	ysv19s/RzcbIx8v19s3LxsfH9fbI0czHzMya1M3I9fbP0c/OzM3HzPX20s/Rz8/Px8/Jz8j19tLK0cbL
+	xsya1M3P9fbSy87Ry8fHzPX2zsnRycbK9fbNzc7Ix/X2zPX2z9HKzszOzvX2z9HMz8zGy/X20s3Rx8fJ
+	zJrSz8j19s/RyM7Lx8319s/19s/RysfKxsb19tLP0cr19s/19s/19sfI0crLyc719s7M0czLzcj19sfR
+	z8fPzfX2zcrP0c7KzPX2zs3K0c/JyfX20s7G0cbJys319sjJz/X2zs/P9fbP0c3K9fbP0c3My8zJ9fbO
+	9fbMz/X2z9HK9fbP9fbP9fbSzsn19s7Kz/X2z/X2y8zRzMjNyvX20s/Rz8vJys719tLOzcjKzdHI9fbP
+	0c/Pys3Hzcf19s/Rz8/PyMnOx8f19s/Rz8/Nxs/LzvX2zsfRyM3HyPX2x9HKzc7L9fbSz9HOzcfGzvX2
+	0s/Rz8/IzcbGyfX2z9HPz87Jz8zO9fbP0czNz8nL9fbP0c/OzsfLy/X20s/Rz8/PzszHy8n19s/Rz8zG
+	zc/J9fbP0c/PyszHzcr19s/Rz8/Ny8zMzfX2z9HIy8vPxvX2z9HPz8zPzsn19s/RzsrPxsv19svK0cnL
+	xsb19svLx8vJy/X2zdHMysn19szPyNHOyMb19srRz8bO9fbO0crMxszLmtTOz/X20s/Ryc7Oysn19tLO
+	0c7JyM719s7Rzs7O9fbHycfRxs/O9fbP0c3KyM3J9fbSzNHOzsbJmtLPyvX20s3RyszGyprSz8r19tLP
+	0c/Py87GzMv19s/Rz8nOy8bN9fbP0c/Pz87Lzs/I9fbO0c/Hzc319tLP0c/Jx8fPzfX20s/Rz8bGxsfN
+	9fbH0cjKy8n19tLNy9HGysjI9fbP0cfKysbH9fbP0c/L9fbP0c/K9fbP0cf19byXmpyUrIqS38Lfzs3M
+	ys7HyMrG9f//

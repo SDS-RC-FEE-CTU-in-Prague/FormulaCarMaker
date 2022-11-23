@@ -1,0 +1,44 @@
+
+  ----------------------------------------------------------------------------------------------------------------------------
+  IPGKinematics  Version 3.6.7                                            Model: Querlenker                                   
+  ----------------------------------------------------------------------------------------------------------------------------
+
+   Table: General Data                                                    FSE06 front suspension                              
+
+   Parallel Kinematics     - Spring Ratio at CP       [-] :       0.73
+                           - Spring Ratio at WC       [-] :       0.87
+
+                           - Damper Ratio at CP       [-] :       0.73
+                           - Damper Ratio at WC       [-] :       0.87
+
+                           - Stabi Ratio at CP        [-] :       0.84
+                           - Stabi Ratio at WC        [-] :       1.00
+
+                           - Spring Stiff at CP    [N/mm] :      17.66
+                           - Eigenfrequency of Body  [Hz] :       2.85
+
+   Reciprocal Kinematics   - Spring Ratio at CP       [-] :       0.73
+                           - Spring Ratio at WC       [-] :       0.87
+
+                           - Damper Ratio at CP       [-] :       0.73
+                             Damper Ratio at WC       [-] :       0.87
+
+                           - Stabi Ratio at CP        [-] :       0.84
+                             Stabi Ratio at WC        [-] :       1.00
+
+                           - Spring Stiff at CP    [N/mm] :      17.66
+                           - Eigenfrequency of Body  [Hz] :       2.85
+                           - Stabilization      [kNm/rad] :      14.83
+
+   Position with Load      - Mass of Load            [kg] :       0.00
+                           - Deflection of Body      [mm] :       0.00
+
+
+  ----------------------------------------------------------------------------------------------------------------------------
+
+   Table: Vehicle Data                                                    FSE06 front suspension                              
+
+   Stabilizer              - Tors. Spring Stiff  [Nm/rad] : **********
+                           - Trans. Spring Stiff    [N/m] :       0.00
+
+

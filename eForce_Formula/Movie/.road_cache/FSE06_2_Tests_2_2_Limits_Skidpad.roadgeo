@@ -8331,15 +8331,59 @@ ELEMENT fric_0 {
   DepthWrite 0
   interiorcolor 0.72,0.72,0.91,0.5
   TRILIST {
-	tn	140.166 92.820 0 0 0 1
-	tn	169.223 92.820 0 0 0 1
-	tn	140.166 94.320 0 0 0 1
-	sn	169.223 94.320 0 0 0 1
+	tn	77.600 89.520 0 0 0 1
+	tn	117.600 89.520 0 0 0 1
+	tn	77.600 91.020 0 0 0 1
+	sn	117.600 91.020 0 0 0 1
 	end
   }
   PolygonOffset 0 0
   DepthWrite 1
 }
+
+ObjId=5
+MDrvPylon 347.600 87.870 0.010
+MDrvPylon 347.600 89.770 0.010
+
+ObjId=16
+MDrvPylon 355.100 87.870 0.010
+MDrvPylon 355.100 89.770 0.010
+
+ObjId=6
+MDrvPylon 362.600 87.870 0.010
+MDrvPylon 362.600 89.770 0.010
+
+ObjId=8
+MDrvPylon 392.600 90.270 0.010
+MDrvPylon 392.600 92.320 0.010
+
+ObjId=17
+MDrvPylon 404.600 90.270 0.010
+MDrvPylon 404.600 92.320 0.010
+
+ObjId=11
+MDrvPylon 417.600 90.270 0.010
+MDrvPylon 417.600 92.320 0.010
+
+ObjId=13
+MDrvPylon 442.600 87.720 0.010
+MDrvPylon 442.600 89.920 0.010
+
+ObjId=14
+MDrvPylon 450.100 87.720 0.010
+MDrvPylon 450.100 89.920 0.010
+
+ObjId=15
+MDrvPylon 457.600 87.720 0.010
+MDrvPylon 457.600 89.920 0.010
+
+ObjId=18
+MDrvPylon 465.100 87.720 0.010
+MDrvPylon 465.100 89.920 0.010
+
+ObjId=19
+MDrvPylon 472.600 87.720 0.010
+MDrvPylon 472.600 89.920 0.010
 
 ELEMENT Route_37 {
   interiorcolor 0.5 0.5 0.5 0.3

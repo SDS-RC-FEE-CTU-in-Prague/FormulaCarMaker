@@ -1,0 +1,11 @@
+Na vygenerovnaie noveho tire .bin formatu si pozri formula carmaker tutorial.
+
+V skratke spusti si comand line.
+Pomocou cd sa dostan do dir kde mas tireutil.
+Pastni do cmd:
+tireutil -if 265_40ZR-18.tdx -of 265_40ZR-18 -ofbin 265_40ZR-18.bin
+tireutil -if 235_40ZR-18.tdx -of 235_40ZR-18 -ofbin 235_40ZR-18.bin
+tireutil -if FS_205_40R10_David.tdx -of FS_205_40R10_David -ofbin FS_205_40R10_David.bin
+
+
+Vygeneruje sa ti .bin a .txt file z .tdx nameranych/odhadnutych dat

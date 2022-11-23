@@ -1,0 +1,26 @@
+# ----------------------------------------------------------------------
+# Name:		lin01000.gum
+# Date:		2007-12-06/es
+#
+# Comment:	values +X-axis -> linear 1000 N/mm
+#		values +Y-axis -> linear 1000 N/mm
+#		values +Z-axis -> linear 1000 N/mm
+#
+# Attention:	bushing axial axle = X-axis
+# ----------------------------------------------------------------------
+' displacement +X   [mm]      '     5.0      10.0      15.0
+' force        +X   [N]       '  5000.0   10000.0   15000.0
+' damping coeff.    [N*s/m]   '  5000.0
+' rot. stiffness    [N*m/rad] '     0.0
+' --------------------------- '
+' displacement +Y   [mm]      '     5.0      10.0      15.0
+' force        +Y   [N]       '  5000.0   10000.0   15000.0
+' damping coeff.    [N*s/m]   '  5000.0
+' rot. stiffness    [N*m/rad] '     0.0
+' --------------------------- '
+' displacement +Z   [mm]      '     5.0      10.0      15.0
+' force        +Z   [N]       '  5000.0   10000.0   15000.0
+' damping coeff.    [N*s/m]   '  5000.0
+' rot. stiffness    [N*m/rad] '     0.0
+' --------------------------- '
+' symmetric=0, asymmetric=1   ' 0

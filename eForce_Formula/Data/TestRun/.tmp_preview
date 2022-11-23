@@ -1,0 +1,13 @@
+#INFOFILE1.1 - Do not remove this line!
+TestRun.Name = FSE06/1_Disciplines/1_4_Endurance/1_4_2_Czech/FSCZECH2015
+Vehicle = FSE07_vehicle
+Trailer =
+Trailer2 =
+Tire.0 =
+Tire.1 =
+Tire.2 =
+Tire.3 =
+Road.FName = .tmp__ML.1
+Road.VhclStartPos = 0.0 0 0
+Road.VhclRoute = Route_0
+Road.RouteId = 0

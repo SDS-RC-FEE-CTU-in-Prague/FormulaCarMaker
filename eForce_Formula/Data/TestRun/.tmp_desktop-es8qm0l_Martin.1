@@ -1,0 +1,552 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-TestRun 6
+FileCreator = CarMaker for Simulink 6.0.3 2017-9-22
+Description:
+	Course created using Google Earth and event handbook
+Vehicle = FSE07_vehicle
+Trailer =
+Tire.0 =
+Tire.1 =
+Tire.2 =
+Tire.3 =
+Snapshot.TimeLimit =
+Snapshot.DistLimit =
+VehicleLoad.0.mass = 0.0
+VehicleLoad.0.pos = 0.0 0.0 0.0
+VehicleLoad.1.mass = 0.0
+VehicleLoad.1.pos = 0.0 0.0 0.0
+VehicleLoad.2.mass = 0.0
+VehicleLoad.2.pos = 0.0 0.0 0.0
+VehicleLoad.3.mass = 0
+VehicleLoad.3.pos = 0.0 0.0 0.0
+TrailerLoad.0.mass = 0.0
+TrailerLoad.0.pos = 0.0 0.0 0.0
+TrailerLoad.1.mass = 0.0
+TrailerLoad.1.pos = 0.0 0.0 0.0
+TrailerLoad.2.mass = 0.0
+TrailerLoad.2.pos = 0.0 0.0 0.0
+DrivMan.Init.Velocity = 0
+DrivMan.Init.GearNo = 0
+DrivMan.Init.SteerAng = 0
+DrivMan.Init.LaneOffset = 0
+DrivMan.Init.OperatorActive = 1
+DrivMan.Init.OperatorState = drive
+DrivMan.VhclOperator.Kind = IPGOperator 1
+DrivMan.nDMan = 35
+DrivMan.0.Label = Reach speed 20
+DrivMan.0.TimeLimit = 10.0
+DrivMan.0.EndCondition = (Car.v*3.6) > 22
+DrivMan.0.Clutch = 0 0 0 abs
+DrivMan.0.Gas = 0.8 0 0 abs
+DrivMan.0.Brake = 0 0 0 abs
+DrivMan.0.BrakePark = 0 0 0 abs
+DrivMan.0.LongDyn = Manual
+DrivMan.0.LatDyn = Step 0 0.0 0.0 abs 1
+DrivMan.0.SteerMode = Angle
+DrivMan.1.Label = Coast1
+DrivMan.1.TimeLimit = 3.0
+DrivMan.1.EndCondition = (Car.v*3.6) < 20
+DrivMan.1.Clutch = 0 0 0 abs
+DrivMan.1.Gas = 0 0 0 abs
+DrivMan.1.Brake = 0 0 0 abs
+DrivMan.1.BrakePark = 0 0 0 abs
+DrivMan.1.LongDyn = Manual
+DrivMan.1.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.1.SteerMode = Angle
+DrivMan.2.Label = Sin steer1
+DrivMan.2.TimeLimit = 15.0
+DrivMan.2.EndCondition = Car.v<0.1
+DrivMan.2.LongDyn = VelControl 20 0.0 1.0 0.0 1 0.0
+DrivMan.2.LatDyn = Sinus $steer_step=20 time $steer_sin_period=2 0.0 4 abs 0 0
+DrivMan.2.SteerMode = Angle
+DrivMan.3.TimeLimit = 5
+DrivMan.3.LongDyn = Stop 8.0 0
+DrivMan.3.LatDyn = Step 0.0 0.0 5.0 abs 1
+DrivMan.3.SteerMode = Angle
+DrivMan.4.Label = Reach speed 30
+DrivMan.4.TimeLimit = 10.0
+DrivMan.4.EndCondition = (Car.v*3.6) > 32
+DrivMan.4.Clutch = 0 0 0 abs
+DrivMan.4.Gas = 0.8 0 0 abs
+DrivMan.4.Brake = 0 0 0 abs
+DrivMan.4.BrakePark = 0 0 0 abs
+DrivMan.4.LongDyn = Manual
+DrivMan.4.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.4.SteerMode = Angle
+DrivMan.5.Label = Coast2
+DrivMan.5.TimeLimit = 3.0
+DrivMan.5.EndCondition = (Car.v*3.6) < 30
+DrivMan.5.Clutch = 0 0 0 abs
+DrivMan.5.Gas = 0 0 0 abs
+DrivMan.5.Brake = 0 0 0 abs
+DrivMan.5.BrakePark = 0 0 0 abs
+DrivMan.5.LongDyn = Manual
+DrivMan.5.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.5.SteerMode = Angle
+DrivMan.6.Label = Sin steer2
+DrivMan.6.TimeLimit = 15.0
+DrivMan.6.EndCondition = Car.v<0.1
+DrivMan.6.LongDyn = VelControl 30 0.0 1.0 0.0 1 0.0
+DrivMan.6.LatDyn = Sinus $steer_step=20 time $steer_sin_period=2 0.0 4 abs 0 0
+DrivMan.6.SteerMode = Angle
+DrivMan.7.TimeLimit = 5
+DrivMan.7.LongDyn = Stop 8.0 0
+DrivMan.7.LatDyn = Step 0.0 0.0 5.0 abs 1
+DrivMan.7.SteerMode = Angle
+DrivMan.8.Label = Reach speed 40
+DrivMan.8.TimeLimit = 10.0
+DrivMan.8.EndCondition = (Car.v*3.6) > 42
+DrivMan.8.Clutch = 0 0 0 abs
+DrivMan.8.Gas = 0.8 0 0 abs
+DrivMan.8.Brake = 0 0 0 abs
+DrivMan.8.BrakePark = 0 0 0 abs
+DrivMan.8.LongDyn = Manual
+DrivMan.8.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.8.SteerMode = Angle
+DrivMan.9.Label = Coast3
+DrivMan.9.TimeLimit = 3.0
+DrivMan.9.EndCondition = (Car.v*3.6) < 40
+DrivMan.9.Clutch = 0 0 0 abs
+DrivMan.9.Gas = 0 0 0 abs
+DrivMan.9.Brake = 0 0 0 abs
+DrivMan.9.BrakePark = 0 0 0 abs
+DrivMan.9.LongDyn = Manual
+DrivMan.9.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.9.SteerMode = Angle
+DrivMan.10.Label = Sin steer3
+DrivMan.10.TimeLimit = 15.0
+DrivMan.10.EndCondition = Car.v<0.1
+DrivMan.10.LongDyn = VelControl 40 0.0 1.0 0.0 1 0.0
+DrivMan.10.LatDyn = Sinus $steer_step=20 time $steer_sin_period=2 0.0 4 abs 0 0
+DrivMan.10.SteerMode = Angle
+DrivMan.11.TimeLimit = 5
+DrivMan.11.LongDyn = Stop 8.0 0
+DrivMan.11.LatDyn = Step 0.0 0.0 5.0 abs 1
+DrivMan.11.SteerMode = Angle
+DrivMan.12.Label = Reach speed 50
+DrivMan.12.TimeLimit = 10.0
+DrivMan.12.EndCondition = (Car.v*3.6) > 53
+DrivMan.12.Clutch = 0 0 0 abs
+DrivMan.12.Gas = 0.8 0 0 abs
+DrivMan.12.Brake = 0 0 0 abs
+DrivMan.12.BrakePark = 0 0 0 abs
+DrivMan.12.LongDyn = Manual
+DrivMan.12.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.12.SteerMode = Angle
+DrivMan.13.Label = Coast4
+DrivMan.13.TimeLimit = 3.0
+DrivMan.13.EndCondition = (Car.v*3.6) < 50
+DrivMan.13.Clutch = 0 0 0 abs
+DrivMan.13.Gas = 0 0 0 abs
+DrivMan.13.Brake = 0 0 0 abs
+DrivMan.13.BrakePark = 0 0 0 abs
+DrivMan.13.LongDyn = Manual
+DrivMan.13.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.13.SteerMode = Angle
+DrivMan.14.Label = Sin steer4
+DrivMan.14.TimeLimit = 15.0
+DrivMan.14.EndCondition = Car.v<0.1
+DrivMan.14.LongDyn = VelControl 50 0.0 1.0 0.0 1 0.0
+DrivMan.14.LatDyn = Sinus $steer_step=20 time $steer_sin_period=2 0.0 4 abs 0 0
+DrivMan.14.SteerMode = Angle
+DrivMan.15.TimeLimit = 5
+DrivMan.15.LongDyn = Stop 8.0 0
+DrivMan.15.LatDyn = Step 0.0 0.0 5.0 abs 1
+DrivMan.15.SteerMode = Angle
+DrivMan.16.Label = Reach speed 60
+DrivMan.16.TimeLimit = 10.0
+DrivMan.16.EndCondition = (Car.v*3.6) > 63
+DrivMan.16.Clutch = 0 0 0 abs
+DrivMan.16.Gas = 0.8 0 0 abs
+DrivMan.16.Brake = 0 0 0 abs
+DrivMan.16.BrakePark = 0 0 0 abs
+DrivMan.16.LongDyn = Manual
+DrivMan.16.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.16.SteerMode = Angle
+DrivMan.17.Label = Coast5
+DrivMan.17.TimeLimit = 3.0
+DrivMan.17.EndCondition = (Car.v*3.6) < 60
+DrivMan.17.Clutch = 0 0 0 abs
+DrivMan.17.Gas = 0 0 0 abs
+DrivMan.17.Brake = 0 0 0 abs
+DrivMan.17.BrakePark = 0 0 0 abs
+DrivMan.17.LongDyn = Manual
+DrivMan.17.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.17.SteerMode = Angle
+DrivMan.18.Label = Sin steer5
+DrivMan.18.TimeLimit = 15.0
+DrivMan.18.EndCondition = Car.v<0.1
+DrivMan.18.LongDyn = VelControl 60 0.0 1.0 0.0 1 0.0
+DrivMan.18.LatDyn = Sinus $steer_step=20 time $steer_sin_period=2 0.0 4 abs 0 0
+DrivMan.18.SteerMode = Angle
+DrivMan.19.TimeLimit = 5
+DrivMan.19.LongDyn = Stop 8.0 0
+DrivMan.19.LatDyn = Step 0.0 0.0 5.0 abs 1
+DrivMan.19.SteerMode = Angle
+DrivMan.20.Label = Reach speed 70
+DrivMan.20.TimeLimit = 10.0
+DrivMan.20.EndCondition = (Car.v*3.6) > 75
+DrivMan.20.Clutch = 0 0 0 abs
+DrivMan.20.Gas = 0.8 0 0 abs
+DrivMan.20.Brake = 0 0 0 abs
+DrivMan.20.BrakePark = 0 0 0 abs
+DrivMan.20.LongDyn = Manual
+DrivMan.20.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.20.SteerMode = Angle
+DrivMan.21.Label = Coast6
+DrivMan.21.TimeLimit = 3.0
+DrivMan.21.EndCondition = (Car.v*3.6) < 70
+DrivMan.21.Clutch = 0 0 0 abs
+DrivMan.21.Gas = 0 0 0 abs
+DrivMan.21.Brake = 0 0 0 abs
+DrivMan.21.BrakePark = 0 0 0 abs
+DrivMan.21.LongDyn = Manual
+DrivMan.21.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.21.SteerMode = Angle
+DrivMan.22.Label = Sin steer6
+DrivMan.22.TimeLimit = 15.0
+DrivMan.22.EndCondition = Car.v<0.1
+DrivMan.22.LongDyn = VelControl 70 0.0 1.0 0.0 1 0.0
+DrivMan.22.LatDyn = Sinus $steer_step=20 time $steer_sin_period=2 0.0 4 abs 0 0
+DrivMan.22.SteerMode = Angle
+DrivMan.23.TimeLimit = 5
+DrivMan.23.LongDyn = Stop 8.0 0
+DrivMan.23.LatDyn = Step 0.0 0.0 5.0 abs 1
+DrivMan.23.SteerMode = Angle
+DrivMan.24.Label = Reach speed 80
+DrivMan.24.TimeLimit = 10.0
+DrivMan.24.EndCondition = (Car.v*3.6) > 85
+DrivMan.24.Clutch = 0 0 0 abs
+DrivMan.24.Gas = 0.8 0 0 abs
+DrivMan.24.Brake = 0 0 0 abs
+DrivMan.24.BrakePark = 0 0 0 abs
+DrivMan.24.LongDyn = Manual
+DrivMan.24.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.24.SteerMode = Angle
+DrivMan.25.Label = Coast7
+DrivMan.25.TimeLimit = 3.0
+DrivMan.25.EndCondition = (Car.v*3.6) < 80
+DrivMan.25.Clutch = 0 0 0 abs
+DrivMan.25.Gas = 0 0 0 abs
+DrivMan.25.Brake = 0 0 0 abs
+DrivMan.25.BrakePark = 0 0 0 abs
+DrivMan.25.LongDyn = Manual
+DrivMan.25.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.25.SteerMode = Angle
+DrivMan.26.Label = Sin steer7
+DrivMan.26.TimeLimit = 15.0
+DrivMan.26.EndCondition = Car.v<0.1
+DrivMan.26.LongDyn = VelControl 80 0.0 1.0 0.0 1 0.0
+DrivMan.26.LatDyn = Sinus $steer_step=20 time $steer_sin_period=2 0.0 4 abs 0 0
+DrivMan.26.SteerMode = Angle
+DrivMan.27.TimeLimit = 5
+DrivMan.27.LongDyn = Stop 8.0 0
+DrivMan.27.LatDyn = Step 0.0 0.0 5.0 abs 1
+DrivMan.27.SteerMode = Angle
+DrivMan.28.Label = Reach speed 90
+DrivMan.28.TimeLimit = 10.0
+DrivMan.28.EndCondition = (Car.v*3.6) > 95
+DrivMan.28.Clutch = 0 0 0 abs
+DrivMan.28.Gas = 0.8 0 0 abs
+DrivMan.28.Brake = 0 0 0 abs
+DrivMan.28.BrakePark = 0 0 0 abs
+DrivMan.28.LongDyn = Manual
+DrivMan.28.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.28.SteerMode = Angle
+DrivMan.29.Label = Coast8
+DrivMan.29.TimeLimit = 3.0
+DrivMan.29.EndCondition = (Car.v*3.6) < 90
+DrivMan.29.Clutch = 0 0 0 abs
+DrivMan.29.Gas = 0 0 0 abs
+DrivMan.29.Brake = 0 0 0 abs
+DrivMan.29.BrakePark = 0 0 0 abs
+DrivMan.29.LongDyn = Manual
+DrivMan.29.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.29.SteerMode = Angle
+DrivMan.30.Label = Sin steer8
+DrivMan.30.TimeLimit = 15.0
+DrivMan.30.EndCondition = Car.v<0.1
+DrivMan.30.LongDyn = VelControl 90 0.0 1.0 0.0 1 0.0
+DrivMan.30.LatDyn = Sinus $steer_step=20 time $steer_sin_period=2 0.0 4 abs 0 0
+DrivMan.30.SteerMode = Angle
+DrivMan.31.TimeLimit = 5
+DrivMan.31.LongDyn = Stop 8.0 0
+DrivMan.31.LatDyn = Step 0.0 0.0 5.0 abs 1
+DrivMan.31.SteerMode = Angle
+DrivMan.32.Label = Reach speed 100
+DrivMan.32.TimeLimit = 10.0
+DrivMan.32.EndCondition = (Car.v*3.6) > 105
+DrivMan.32.Clutch = 0 0 0 abs
+DrivMan.32.Gas = 0.8 0 0 abs
+DrivMan.32.Brake = 0 0 0 abs
+DrivMan.32.BrakePark = 0 0 0 abs
+DrivMan.32.LongDyn = Manual
+DrivMan.32.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.32.SteerMode = Angle
+DrivMan.33.Label = Coast9
+DrivMan.33.TimeLimit = 3.0
+DrivMan.33.EndCondition = (Car.v*3.6) < 100
+DrivMan.33.Clutch = 0 0 0 abs
+DrivMan.33.Gas = 0 0 0 abs
+DrivMan.33.Brake = 0 0 0 abs
+DrivMan.33.BrakePark = 0 0 0 abs
+DrivMan.33.LongDyn = Manual
+DrivMan.33.LatDyn = Step 0.0 0.0 0.0 abs 1
+DrivMan.33.SteerMode = Angle
+DrivMan.34.Label = Sin steer9
+DrivMan.34.TimeLimit = 15.0
+DrivMan.34.EndCondition = Car.v<0.1
+DrivMan.34.LongDyn = VelControl 100 0.0 1.0 0.0 1 0.0
+DrivMan.34.LatDyn = Sinus $steer_step=20 time $steer_sin_period=2 0.0 4 abs 0 0
+DrivMan.34.SteerMode = Angle
+Traffic.IFF.FName =
+Traffic.IFF.Time.Name =
+Traffic.N = 0
+Traffic.SpeedUnit = ms
+DrivMan.OW.Active = 0
+DrivMan.OW.Quantities = Time
+DrivMan.OW.FName = Example-01.dat
+DrivMan.OW.StartGearNo =
+DrivMan.OW.StartVelocity =
+DrivMan.OW.GasMax =
+DrivMan.OW.Time.Name =
+DrivMan.OW.Time.Factor = 1.0
+DrivMan.OW.Time.Offset = 0.0
+ErrorClass.0.Action = abort
+ErrorClass.0.Save =
+ErrorClass.0.WarningLimit = 3 5.0
+ErrorClass.1.Action = abort
+ErrorClass.1.Save =
+ErrorClass.1.WarningLimit = 3 5.0
+ErrorClass.2.Action = abort
+ErrorClass.2.Save =
+ErrorClass.2.WarningLimit = 3 5.0
+ErrorClass.3.Action = abort
+ErrorClass.3.Save =
+ErrorClass.3.WarningLimit = 3 5.0
+ErrorClass.4.Action = abort
+ErrorClass.4.Save =
+ErrorClass.4.WarningLimit = 3 5.0
+ErrorClass.5.Action = abort
+ErrorClass.5.Save =
+ErrorClass.5.WarningLimit = 3 5.0
+ErrorClass.10.Action = abort
+ErrorClass.10.Save = 0
+ErrorClass.10.WarningLimit = 3 4.0
+ErrorClass.11.Action = abort
+ErrorClass.11.Save = 0
+ErrorClass.11.WarningLimit = 3 6.0
+Road.FileIdent = IPGRoad 6.0
+Road.Country = DEU
+Road.nLinks = 1
+Road.nJunctions = 0
+Road.nObjects = 28
+Road.nRoutes = 2
+Road.RoadNetworkLength = 10000
+Road.BBox = 0 10000 -5002 5002 -0.25 0.25
+Road.Route.0.Length = 10000
+Road.Route.1.Length = 10000
+Road.RST.Unit = kmh
+Road.RST = 50 100 -3.6 30 70 50 -3.6 -3.6
+Road.Movie = 0.2 1 0.02 1.5 1.5 0 0
+Road.PathMode = 0
+Road.Link.0.Junctions = -1 -1 -2 -1
+Road.Link.0.Node0 = 0 0 0 0
+Road.Link.0.Friction = 1
+Road.Link.0.Seg.0.Type = Straight
+Road.Link.0.Seg.0.Param = 10000 0 0 0 0 0 0 0
+Road.Link.0.LaneSection.0.Start = 0
+Road.Link.0.LaneSection.0.LaneL.0 = 0 5000 5000 0 0 0 0
+Road.Link.0.LaneSection.0.LaneL.0.Width:
+	0 0 0 5000 0 -999 -999
+Road.Link.0.LaneSection.0.LaneL.1 = 2 2 2 5 0 0 0
+Road.Link.0.LaneSection.0.LaneR.0 = 0 5000 5000 0 0 0 0
+Road.Link.0.LaneSection.0.LaneR.0.Width:
+	0 0 0 5000 0 -999 -999
+Road.Link.0.LaneSection.0.LaneR.1 = 2 2 2 5 0 0 0
+Road.Link.0.RoadMarking.0 = 0 0 0 1 0 0 5 0 2 0 0 0.4 1000 1 1 4 ""
+Road.Link.0.RoadMarking.1 = 0 0 0 1 -0.1 1 0.1 0 2 0 0 2 2 1 1 4 ""
+Road.Link.0.RoadMarking.2 = 0 0 0 1 0.1 -1 0.1 0 2 0 0 2 2 1 1 4 ""
+Route.0.Name = Route
+Route.0.LinkList:
+	0 0
+Route.0.Path.0:
+	0 0 0
+	10000 0 0
+Route.1.Name = ReverseRoute
+Route.1.LinkList:
+	0 1
+Route.1.Path.0:
+	0 0 0
+	10000 0 0
+Road.MaxUsedObjId = 0
+Road.VhclStartPos = 5000 0 0
+Road.VhclRoute = Route
+Road.RouteId = 0
+Env.StartTime.Year = 2014
+Env.StartTime.Month = 1
+Env.StartTime.Day = 1
+Env.StartTime.Hour = 12
+Env.StartTime.Min = 0
+Env.StartTime.Sec = 0
+Env.StartTime.DeltaUTC = 0.0
+Env.GNav.Active = 0
+Env.Temperature = 20.0
+Env.AirDensity = 1.205
+Env.AirPressure = 1.013
+Env.AirHumidity = 60
+Env.SolarRadiation = 400.0
+Env.RainRate = 0.0
+Env.VisRangeInFog = 1000.0
+Env.Wind.Kind = none
+Env.Wind.Velocity = 0.0
+Env.Wind.Angle = 0.0
+Env.Kind = Generic
+Env.Temp.Offset_Elev = -0.0065
+Env.Temp.Offset_sRoad.Amplify = 1.0
+Env.Temp.Offset_sRoad.On = 0
+Env.Temp.Offset_Time.Amplify = 1.0
+Env.Temp.Offset_Time.On = 1
+Env.Temp.Offset_Time:
+	0.0 -2.0
+	3.0 -2.5
+	6.0 -2.7
+	7.5 -2.7
+	9.0 -2.5
+	10.0 -2.3
+	11.0 -1.6
+	12.0 0.0
+	13.0 1.4
+	14.0 2.1
+	15.5 2.5
+	17.0 2.2
+	18.0 1.7
+	19.0 1.1
+	20.0 0.2
+	21.0 -0.6
+	22.0 -1.1
+	23.0 -1.6
+	24.0 -2.0
+Driver.ParamIdent = IPGDriver 5
+Driver.Mode = std
+Driver.Long.DrivMaxSpeed = 0
+Driver.Long.CruisingSpeed = 100
+Driver.CornerCutCoef = 0.6
+Driver.ConsiderTraffic = 0
+Driver.Traffic.TimeGapMin = 1.8
+Driver.Traffic.TimeGapMax = 5.0
+Driver.Traffic.DistMin = 6
+Driver.Traffic.DistMax = 250
+Driver.Traffic.EcoCoef = 0.75
+Driver.Traffic.Overtake = 0
+Driver.Traffic.Overtake_Rate = 1
+Driver.Traffic.Overtake_dSpeedMin = 10
+Driver.Long.dtAccBrake = 0
+Driver.Long.axMax = 8
+Driver.Long.axMin = -8
+Driver.Long.ayMax = 8
+Driver.Long.GGExp:
+	50 1.2 1.2
+Driver.Long.DevMax = 0.0
+Driver.Long.tReact = 0.0
+Driver.Long.TractionControl = 0
+Driver.DecShift.UseBrakePark = 0
+Driver.DecShift.tSwitchGear = 0
+Driver.DecShift.nEngine.Limits:
+	2500 5000
+Driver.DecShift.nEngine.Shift:
+	3000 4500
+Driver.Lat.DevMax = 0.0
+Driver.Lat.tReact = 0.0
+Driver.Knowl.Long.tActionMin = 0
+Driver.Knowl.Lat.StWhlAngleMax = 100
+Driver.Knowl.Lat.StWhlAngleVelMax = 300
+Driver.Knowl.Lat.StWhlAngleAccMax = 2000
+Driver.Learn.VehicleLimits.TestRun = eForce/7_Endurance_Czech/FSE04_FSCZECH2015
+Driver.Learn.VehicleLimits.Date = 1458500376
+Driver.Learn.ControllerDyn.TestRun = eForce/7_Endurance_Czech/FSE04_FSCZECH2015
+Driver.Learn.ControllerDyn.Date = 1458500376
+Driver.Learn.MaxSpeed.TestRun = Exampels_FS/FS_Competition_Germany_2006
+Driver.Learn.MaxSpeed.Date = 1316433322
+Driver.Learn.Remember = 1
+Driver.Learn.Friction = 1.0
+Driver.Knowl.Info =
+Driver.Knowl.Vehicle.iDiff = 6.00000
+Driver.Knowl.Vehicle.rWheel = 0.19500
+Driver.Knowl.Vehicle.iFGear = 5.30000
+Driver.Knowl.Vehicle.iBGear = -4.00000
+Driver.Knowl.Vehicle.Aero.Factor_axAccel = 1.000
+Driver.Knowl.Vehicle.Aero.Factor_axDecel = 1.000
+Driver.Knowl.Vehicle.Aero.Factor_ay = 0.950
+Driver.Knowl.Vehicle.Aero:
+	20.00 11.06 -13.79 14.18
+	30.00 10.85 -13.78 14.64
+	40.00 10.45 -13.80 15.10
+	50.00 10.03 -13.98 15.57
+	60.00 9.34 -14.51 16.11
+	70.00 8.16 -15.35 16.78
+	80.00 6.69 -16.60 17.48
+	90.00 5.12 -18.23 18.09
+	100.00 3.57 -19.59 18.65
+	110.00 2.39 -20.07 19.20
+	120.00 2.00 -20.07 19.76
+Driver.Knowl.Lat.tPreview = 0.600
+Driver.Knowl.Lat.tYawPro = 0.060
+Driver.Knowl.Lat.tPreDyn = 0.030
+Driver.Knowl.Lat.LimitSideSlip = 12.938
+Driver.Knowl.Lat.StWhlTorqueAmplify = 1.000
+Driver.Knowl.Lat.StWhlTorqueAmplifyC = 1.000
+Driver.Knowl.Lat.StWhlTorqueAmplifyV = 1.000
+Driver.Knowl.Long.tPreviewAcc = 0.35
+Driver.Knowl.Long.tPreviewBra = 0.60
+Driver.Knowl.Long.tPreEngDyn = 0.05
+Driver.Knowl.Long.tPreBraDyn = 0.2
+Driver.Knowl.Long.SlipMax:
+	16.87 2.34 1.34
+	29.41 5.90 3.38
+	43.36 9.58 5.50
+	62.02 10.74 6.16
+	82.55 10.52 6.04
+Driver.Learn.Engine.TrqMax:
+	7922 0.00
+	7994 0.00
+	7888 0.00
+	7856 0.00
+	7840 0.00
+Driver.Learn.Engine.PwrMax:
+	10349 0.0000
+	10232 0.0000
+	10061 0.0000
+	9981 0.0000
+	9863 0.0000
+Driver.Learn.nEngineIdle = 0
+Driver.Learn.nEngineMax = 0
+Driver.Learn.nEngine.MaxSpeed:
+	0 0
+	0 0
+	0 0
+	0 0
+	0 0
+Driver.Learn.nEngine.Standard:
+	0 0
+	0 0
+	0 0
+	0 0
+	0 0
+Driver.Learn.vIdle = 15.000
+Driver.Learn.vMax = 114.507
+Driver.Learn.vG2nEng025 = 28.627
+Driver.Learn.vG2nEng075 = 45.803
+Driver.Learn.axBra_vG2nEng05 = -9.540
+Driver.Learn.axAccG2 = 9.436
+Driver.Learn.axDragG1 = 0.5
+Driver.Learn.tYawPro_YawAcc = 67.717
+Driver.Learn.tYawPro_StWhlA = 2.623
+Driver.Learn.vnEng05 = 19	38	57	76	95
+Driver.Learn.axAccMax = 1.00	1.00	1.00	1.00	1.00
+Driver.Learn.ayMax = 7.18	10.67	14.25	16.05	17.53
+Driver.Learn.StWhlA_ayMax = 96.90	44.90	33.73	25.97	21.12
+Driver.Learn.PT_Kind = 2
+Driver.Learn.PT_h_COG = 0.315
+Driver.Learn.PT_SlipMax = 2.662	2.662	7.573	7.573
+Driver.Learn.NEng_S = 1

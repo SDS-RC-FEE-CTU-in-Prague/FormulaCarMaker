@@ -1,6 +1,6 @@
 #INFOFILE1.1 - Do not remove this line!
 FileIdent = Scenario-Config 1.0
-FileCreator = CarMaker 9.1.1 2020-12-18
+FileCreator = CarMaker for Simulink 9.1.1 2020-12-18
 
 Scene.Country = DEU
 Scene.Country2 =

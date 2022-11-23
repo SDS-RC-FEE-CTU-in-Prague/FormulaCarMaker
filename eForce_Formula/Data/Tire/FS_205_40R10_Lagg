@@ -1,0 +1,41 @@
+#INFOFILE1 - Do not remove this line!
+FileIdent = CarMaker-Tire-RTTire 3
+FileCreator = tireutil vCARMAKER_VER,  by (null)
+CreateArgs = -if FS_205_40R10_Lagg.tdx -of FS_205_40R10_Lagg -ofbin FS_205_40R10_Lagg.bin 
+
+Description:
+	Created with IPG Tire Data Set Generator Version 1.0 (2015-06-09) by Marek
+	Generated - not validated - Tire data
+	Based on 'FS_205_40R10_Lagg.tdx'
+	""
+	#   Load:      32 points [ 0 N  to  2500 N ]
+	#   Slip:     128 points [ -0.8   to  0.8 ]
+	#   Alpha:    128 points [ -30 deg  to  30 deg ]
+
+Side = left
+muRoad = 1
+
+Radial.Stiffness = 140000
+Radial.Damping = 1000
+
+KinRollRadius = 0.195
+NomRadius = 0.205
+NomWidth = 0.205
+AspectRatio = 0.4
+
+FLoadMax = 2000
+
+LongFrc.Length = 0.05
+SideFrc.Length = 0.1
+AlignTrq.Length = 0.1
+
+StandStill.cLong = 0.01
+StandStill.cSide = 0.01
+StandStill.cAlign = 0.01
+
+
+RollResist.Kind = TrqLoad
+RollResist.Factor = 0.025
+
+BinFName = FS_205_40R10_Lagg.bin
+

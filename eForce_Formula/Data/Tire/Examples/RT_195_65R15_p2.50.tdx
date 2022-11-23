@@ -1,0 +1,92 @@
+**HEADER
+!--------!-----------------------------!---------!---------!
+! Key    !   Comment                   !  Unit   !  value  !
+!--------!-----------------------------!---------!---------!
+RELEASE   Release of TYDEX-Format                 1.3
+SUPPLIER  Data supplier                           Tire Data Set Generator
+DATE      Date                                    10/12/18
+CLCKTIME  Clocktime                               22:05
+
+**CONSTANTS
+!--------!-----------------------------!---------!---------!
+! Key    !   Comment                   !  Unit   !  value  !
+!--------!-----------------------------!---------!---------!
+NOMWIDTH  Nominal section width of tyre mm        195
+ASPRATIO  Nominal aspect ratio          %         65
+TYSTRUCT  Tyre structure                          R
+RIMDIAME  Nominal rim diameter          inch      15
+RIMWIDTH  Rim width                     inch      6
+RIMPROF   Rim profile                             J
+REFSIDEW  Reference sidewall                      DOT
+TYWHASSB  Tyre-wheel assembly                     REFSWLEFT
+AMBITEMP  Ambient temperature           deg C     25
+INFLPRES  Inflation pressure            bar       2.50
+TRCKCOND  Track condition                         DRY
+OVALLDIA  Overall diameter              mm        635
+NOMDIAME  nominal tire diameter         mm        635
+KROLRAD   kinematic roll radius         mm        308
+IDENTITY  Identity of the tyre                    Created with IPG Tire Data Set Generator - Version Date: 2017-04-28
+PARTNUM   Part number                             Generated - not validated - Tire data
+
+**MODELPARAMETERS
+!--------!-----------------------------!---------!---------!---------!
+! Key    !   Comment                   !  Unit   !  value  ! factor  !
+!--------!-----------------------------!---------!---------!---------!
+ITVS      Vertikale Reifenfeder                   367240.1
+ITVD      Vertikaler Reifendaempfer               4508.5
+ITRLLO    Relaxationslaenge laengs                0.05
+ITRLLA    Relaxationslaenge quer                  0.1
+ITSSCLO   Stillstandskoeffizient long             0.01
+ITSSCLA   Stillstandskoeffizient quer             0.2
+ITRORETL  roll resistance Trq/Load                0.0214
+
+**MEASURCHANNELS
+!--------!-----------------------------!---------!---------!---------!---------!
+! Key    !   Comment                   !  Unit   !  factor ! offset1 ! offset2 !
+!--------!-----------------------------!---------!---------!---------!---------!
+!
+! physical value (Unit) = factor * (measured value + offset1) + offset2
+!
+FZW       Vertical force                N         1         0
+SLIPANGL  Slip angle                    deg       1         0
+FYW       Lateral force                 N         1         0
+MZW       Aligning moment               Nm        1         0
+
+**MEASURDATA
+   1430.00     -12.00        1713.77          -3.59
+   1430.00      -9.00        1644.26          -2.80
+   1430.00      -6.00        1447.08          -2.67
+   1430.00      -3.00         948.43          -3.12
+   1430.00       0.00          -0.00           0.00
+   1430.00       3.00        -948.43           3.12
+   1430.00       6.00       -1447.08           2.67
+   1430.00       9.00       -1644.26           2.80
+   1430.00      12.00       -1713.77           3.59
+   2860.00     -12.00        3126.51           1.72
+   2860.00      -9.00        3193.90          -3.43
+   2860.00      -6.00        3018.98         -12.16
+   2860.00      -3.00        1962.47         -19.59
+   2860.00       0.00          -0.00           0.00
+   2860.00       3.00       -1962.47          19.59
+   2860.00       6.00       -3018.98          12.16
+   2860.00       9.00       -3193.90           3.43
+   2860.00      12.00       -3126.51          -1.72
+   4290.00     -12.00        4516.35          12.28
+   4290.00      -9.00        4648.97          -3.41
+   4290.00      -6.00        4441.39         -28.90
+   4290.00      -3.00        2849.38         -48.32
+   4290.00       0.00          -0.00           0.00
+   4290.00       3.00       -2849.38          48.32
+   4290.00       6.00       -4441.39          28.90
+   4290.00       9.00       -4648.97           3.41
+   4290.00      12.00       -4516.35         -12.28
+   5720.00     -12.00        5952.20          28.22
+   5720.00      -9.00        6114.96          -3.11
+   5720.00      -6.00        5761.60         -52.44
+   5720.00      -3.00        3569.67         -85.72
+   5720.00       0.00          -0.00           0.00
+   5720.00       3.00       -3569.67          85.72
+   5720.00       6.00       -5761.60          52.44
+   5720.00       9.00       -6114.96           3.11
+   5720.00      12.00       -5952.20         -28.22
+**END
